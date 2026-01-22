@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta 3 - Modern Logistics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        glass: 'rgba(255, 255, 255, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+    <!-- Hero with Overlay -->
+    <div class="relative h-screen bg-cover bg-center"
+        style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
+        <div class="absolute inset-0 bg-blue-900 bg-opacity-60"></div>
+
+        <!-- Navbar Overlay -->
+        <nav class="absolute top-0 w-full z-50 px-8 py-6 flex justify-between items-center text-white">
+            <h1 class="text-3xl font-bold tracking-widest">MDS LOGISTICS</h1>
+            <ul class="flex space-x-6 text-sm uppercase tracking-wide">
+                <li class="hover:text-yellow-400 cursor-pointer">Servicios</li>
+                <li class="hover:text-yellow-400 cursor-pointer">Flota</li>
+                <li class="hover:text-yellow-400 cursor-pointer">Seguridad</li>
+                <li class="hover:text-yellow-400 cursor-pointer">Contacto</li>
+            </ul>
+        </nav>
+
+        <!-- Centered Content with Glassmorphism -->
+        <div class="relative z-10 h-full flex items-center justify-center px-4">
+            <div
+                class="bg-glass backdrop-blur-md p-10 rounded-2xl border border-white/20 text-center max-w-2xl text-white shadow-2xl">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Soluciones de Transporte Avanzadas</h2>
+                <p class="text-lg mb-8 text-blue-100">Llevamos mercancías, residuos y carga peligrosa con la máxima
+                    eficiencia y estándares internacionales.</p>
+                <div class="flex justify-center space-x-4">
+                    <button
+                        class="bg-yellow-500 hover:bg-yellow-400 text-blue-900 font-bold py-3 px-8 rounded-full transition shadow-lg transform hover:-translate-y-1">
+                        Cotizar Envío
+                    </button>
+                    <button
+                        class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 text-white font-bold py-3 px-8 rounded-full transition shadow-lg">
+                        Ver Servicios
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="py-20 px-8 -mt-20 relative z-20">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition transform hover:-translate-y-2">
+                <div class="text-blue-600 text-3xl mb-4"><i class="fas fa-biohazard"></i></div>
+                <h3 class="text-xl font-bold mb-2">Transporte Respel</h3>
+                <p class="text-gray-600">Gestión integral de residuos peligrosos con trazabilidad completa.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition transform hover:-translate-y-2">
+                <div class="text-blue-600 text-3xl mb-4"><i class="fas fa-truck-moving"></i></div>
+                <h3 class="text-xl font-bold mb-2">Logística Nacional</h3>
+                <p class="text-gray-600">Cobertura en todo el territorio para cargas generales y encomiendas.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition transform hover:-translate-y-2">
+                <div class="text-blue-600 text-3xl mb-4"><i class="fas fa-shield-alt"></i></div>
+                <h3 class="text-xl font-bold mb-2">Seguridad Total</h3>
+                <p class="text-gray-600">Monitoreo 24/7 y protocolos de emergencia activados en ruta.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

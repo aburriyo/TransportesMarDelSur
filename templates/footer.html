@@ -1,0 +1,73 @@
+<footer class="bg-black text-gray-400 pt-16 pb-8 border-t-4 border-hazard">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <div class="col-span-1 md:col-span-2">
+                <div class="mb-6">
+                    <img src="{{ url_for('static', filename='img/logo.png') }}"
+                         alt="Transporte Mar del Sur"
+                         class="h-20 w-auto"
+                         style="filter: brightness(1.1);">
+                </div>
+                <p class="text-sm leading-relaxed mb-4 max-w-sm">
+                    Especialistas en transporte de sustancias peligrosas (RESPEL) y residuos de establecimientos de salud (REAS). Cumplimiento normativo garantizado.
+                </p>
+                <div class="text-sm mb-6 space-y-2">
+                    <p><strong class="text-white">RUT:</strong> 77.779.818-9</p>
+                    <p><strong class="text-white">Resolución Sanitaria:</strong> N° 2510389969</p>
+                    <p><strong class="text-white">Ubicación:</strong> Puerto Montt, Los Lagos</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="mailto:Transportesmardelsur@gmail.com" class="text-white hover:text-hazard transition" title="Email">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                    <a href="tel:+56942857502" class="text-white hover:text-hazard transition" title="Teléfono">
+                        <i class="fas fa-phone text-xl"></i>
+                    </a>
+                    <a href="https://wa.me/56942857502" target="_blank" class="text-white hover:text-hazard transition" title="WhatsApp">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-wider mb-6">Servicios</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="/servicios" class="hover:text-white transition">Transporte RESPEL</a></li>
+                    <li><a href="/servicios" class="hover:text-white transition">Transporte REAS</a></li>
+                    <li><a href="/servicios" class="hover:text-white transition">Carga General</a></li>
+                    <li><a href="/servicios" class="hover:text-white transition">Almacenaje y Bodega</a></li>
+                    <li><a href="/servicios" class="hover:text-white transition">Gestión Documental</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-wider mb-6">Información</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="/certificaciones" class="hover:text-white transition">Certificaciones</a></li>
+                    <li><a href="/flota" class="hover:text-white transition">Nuestra Flota</a></li>
+                    <li><a href="/faq" class="hover:text-white transition">FAQ</a></li>
+                    <li><a href="/nosotros" class="hover:text-white transition">Sobre Nosotros</a></li>
+                    <li><a href="/contacto" class="hover:text-white transition">Contacto</a></li>
+                </ul>
+                <div class="mt-6 bg-hazard text-dark p-3 rounded text-xs font-bold">
+                    <i class="fas fa-certificate mr-2"></i>
+                    SIDREP Certificado
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
+            <p>&copy; 2026 Transporte Mar del Sur SPA. Todos los derechos reservados.</p>
+            <div class="mt-4 md:mt-0 flex items-center space-x-4">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-shield-alt text-hazard"></i>
+                    <span>Resolución Sanitaria Vigente</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-lock text-hazard"></i>
+                    <span>GPS 24/7</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,203 @@
+{% extends "base.html" %}
+
+{% block title %}Nuestros Servicios | Transporte RESPEL y REAS | Mar del Sur{% endblock %}
+{% block description %}Servicios especializados de transporte de sustancias peligrosas, carga general, almacenaje y gestión documental. Resolución Sanitaria vigente, cobertura nacional.{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="text-hazard font-bold tracking-widest uppercase text-sm">Soluciones Integrales</span>
+        <h1 class="text-5xl md:text-6xl font-black mt-4 mb-6">NUESTROS SERVICIOS</h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Transporte especializado y servicios complementarios con el más alto estándar de calidad y seguridad
+        </p>
+    </div>
+</section>
+
+<!-- Main Services Section -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Transport Service -->
+            <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer">
+                <div class="absolute inset-0 bg-dark opacity-40 group-hover:opacity-30 transition z-10"></div>
+                <img class="w-full h-80 object-cover transform group-hover:scale-110 transition duration-700"
+                    src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                    alt="Servicio transporte RESPEL sustancias peligrosas con resolución sanitaria Chile"
+                    loading="lazy">
+                <div class="absolute bottom-0 left-0 p-8 z-20 w-full bg-gradient-to-t from-black to-transparent">
+                    <div class="flex items-center space-x-4 mb-2">
+                        <div class="bg-hazard p-3 rounded-full text-dark">
+                            <i class="fas fa-biohazard text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-white">Transporte RESPEL</h2>
+                    </div>
+                    <p class="text-gray-200 text-sm mb-4">
+                        Sustancias peligrosas y REAS con resolución sanitaria vigente. Personal certificado, vehículos equipados según normativa DS 298.
+                    </p>
+                    <ul class="text-gray-200 text-sm space-y-1 mt-4">
+                        <li><i class="fas fa-check text-hazard mr-2"></i>Resolución Sanitaria N° 2510389969</li>
+                        <li><i class="fas fa-check text-hazard mr-2"></i>Cumplimiento DS 298 y NCh 2190</li>
+                        <li><i class="fas fa-check text-hazard mr-2"></i>Transporte de todas las clases</li>
+                        <li><i class="fas fa-check text-hazard mr-2"></i>Seguros UF 1.000</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- General Cargo -->
+            <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer">
+                <div class="absolute inset-0 bg-dark opacity-40 group-hover:opacity-30 transition z-10"></div>
+                <img class="w-full h-80 object-cover transform group-hover:scale-110 transition duration-700"
+                    src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                    alt="Servicio transporte carga general 4 toneladas Puerto Montt Chile"
+                    loading="lazy">
+                <div class="absolute bottom-0 left-0 p-8 z-20 w-full bg-gradient-to-t from-black to-transparent">
+                    <div class="flex items-center space-x-4 mb-2">
+                        <div class="bg-hazard p-3 rounded-full text-dark">
+                            <i class="fas fa-truck-moving text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-white">Carga General</h2>
+                    </div>
+                    <p class="text-gray-200 text-sm mb-4">
+                        Flota moderna de 4 toneladas con carrocería de barandas abatibles. Largo carrozable 5,5 metros. GPS 24/7.
+                    </p>
+                    <ul class="text-gray-200 text-sm space-y-1 mt-4">
+                        <li><i class="fas fa-check text-hazard mr-2"></i>Capacidad 4 toneladas</li>
+                        <li><i class="fas fa-check text-hazard mr-2"></i>Dimensiones 5,5m x 2,2m</li>
+                        <li><i class="fas fa-check text-hazard mr-2"></i>Barandas abatibles</li>
+                        <li><i class="fas fa-check text-hazard mr-2"></i>Monitoreo GPS 24/7</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Warehousing Service -->
+            <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer">
+                <div class="absolute inset-0 bg-dark opacity-40 group-hover:opacity-30 transition z-10"></div>
+                <img class="w-full h-80 object-cover transform group-hover:scale-110 transition duration-700"
+                    src="{{ url_for('static', filename='img/warehouse.jpg') }}"
+                    alt="Servicio almacenaje y bodega para sustancias peligrosas Puerto Montt"
+                    loading="lazy">
+                <div class="absolute bottom-0 left-0 p-8 z-20 w-full bg-gradient-to-t from-black to-transparent">
+                    <div class="flex items-center space-x-4 mb-2">
+                        <div class="bg-hazard p-3 rounded-full text-dark">
+                            <i class="fas fa-warehouse text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-white">Almacenaje y Bodega</h2>
+                    </div>
+                    <p class="text-gray-200 text-sm mb-4">
+                        Infraestructura propia para recepción, consolidación y almacenaje seguro. Gestión de inventario profesional.
+                    </p>
+                    <ul class="text-gray-200 text-sm space-y-1 mt-4">
+                        <li><i class="fas fa-check text-hazard mr-2"></i>Infraestructura propia</li>
+                        <li><i class="fas fa-check text-hazard mr-2"></i>Almacenaje seguro</li>
+                        <li><i class="fas fa-check text-hazard mr-2"></i>Control de inventario</li>
+                        <li><i class="fas fa-check text-hazard mr-2"></i>Consolidación de cargas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Services Row -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            <!-- Document Management -->
+            <div class="bg-light p-8 rounded-lg border-l-4 border-hazard hover:shadow-lg transition">
+                <div class="flex items-start space-x-4">
+                    <div class="bg-hazard p-4 rounded-lg">
+                        <i class="fas fa-file-signature text-2xl text-dark"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-bold text-dark mb-2">Gestión Documental</h2>
+                        <p class="text-gray-600 text-sm mb-3">Asesoría en trámites SIDREP, permisos sanitarios y documentación para transporte de residuos peligrosos.</p>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li><i class="fas fa-check text-hazard mr-2"></i>Inscripción ventanilla única SIDREP</li>
+                            <li><i class="fas fa-check text-hazard mr-2"></i>Gestión de permisos sanitarios</li>
+                            <li><i class="fas fa-check text-hazard mr-2"></i>Documentación de transporte</li>
+                            <li><i class="fas fa-check text-hazard mr-2"></i>Hojas de seguridad y fichas técnicas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Final Disposal -->
+            <div class="bg-light p-8 rounded-lg border-l-4 border-hazard hover:shadow-lg transition">
+                <div class="flex items-start space-x-4">
+                    <div class="bg-hazard p-4 rounded-lg">
+                        <i class="fas fa-recycle text-2xl text-dark"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-bold text-dark mb-2">Disposición Final</h2>
+                        <p class="text-gray-600 text-sm mb-3">Convenios activos con plantas autorizadas para el destino final de residuos peligrosos y REAS.</p>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li><i class="fas fa-check text-hazard mr-2"></i>Plantas autorizadas y certificadas</li>
+                            <li><i class="fas fa-check text-hazard mr-2"></i>Trazabilidad completa del proceso</li>
+                            <li><i class="fas fa-check text-hazard mr-2"></i>Certificados de disposición final</li>
+                            <li><i class="fas fa-check text-hazard mr-2"></i>Cumplimiento normativa ambiental</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="bg-light py-16">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-black text-dark">¿Por qué elegirnos?</h2>
+            <p class="text-gray-600 mt-2">Características que nos diferencian</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            <div class="border-b-4 border-transparent hover:border-hazard transition pb-8 group cursor-pointer">
+                <div class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition">
+                    <i class="fas fa-file-medical-alt text-3xl text-gray-400 group-hover:text-hazard transition"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-2">Resolución Sanitaria</h3>
+                <p class="text-sm text-gray-500 px-4">Resolución al día para transporte de sustancias peligrosas</p>
+            </div>
+            <div class="border-b-4 border-transparent hover:border-hazard transition pb-8 group cursor-pointer">
+                <div class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition">
+                    <i class="fas fa-id-card text-3xl text-gray-400 group-hover:text-hazard transition"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-2">Choferes Profesionales</h3>
+                <p class="text-sm text-gray-500 px-4">Capacitados por especialistas en prevención de riesgos</p>
+            </div>
+            <div class="border-b-4 border-transparent hover:border-hazard transition pb-8 group cursor-pointer">
+                <div class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition">
+                    <i class="fas fa-truck-moving text-3xl text-gray-400 group-hover:text-hazard transition"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-2">SIDREP Certificado</h3>
+                <p class="text-sm text-gray-500 px-4">Inscritos en ventanilla única sistema sectorial</p>
+            </div>
+            <div class="border-b-4 border-transparent hover:border-hazard transition pb-8 group cursor-pointer">
+                <div class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition">
+                    <i class="fas fa-shield-alt text-3xl text-gray-400 group-hover:text-hazard transition"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-2">Seguros Vigentes</h3>
+                <p class="text-sm text-gray-500 px-4">Cobertura UF 1.000 para máxima protección</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-gradient-to-r from-hazard to-yellow-400">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-black text-dark mb-4">¿Necesitas un servicio especializado?</h2>
+        <p class="text-lg text-gray-800 mb-8">
+            Contáctanos para una cotización personalizada según tus necesidades
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/contacto" class="inline-block bg-dark text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-800 transition shadow-xl">
+                <i class="fas fa-envelope mr-2"></i>
+                Solicitar Cotización
+            </a>
+            <a href="/" class="inline-block bg-white text-dark px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-xl">
+                <i class="fas fa-home mr-2"></i>
+                Volver al Inicio
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

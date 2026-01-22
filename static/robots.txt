@@ -1,0 +1,35 @@
+# robots.txt para Transporte Mar del Sur
+# Optimizado para SEO y rastreo de motores de búsqueda
+
+User-agent: *
+Allow: /
+Allow: /static/
+Allow: /static/css/
+Allow: /static/js/
+Allow: /static/img/
+
+# Archivos específicos permitidos
+Allow: /sitemap.xml
+Allow: /robots.txt
+
+# Evitar rastreo de archivos temporales o de sistema
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /tmp/
+Disallow: /__pycache__/
+Disallow: /*.pyc$
+
+# Configuración para bots específicos
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /static/img/
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://www.transportemardelsur.cl/sitemap.xml

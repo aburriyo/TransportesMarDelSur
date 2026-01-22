@@ -1,0 +1,170 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{geometry}
+\geometry{top=0cm, bottom=0cm, left=0cm, right=0cm}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{fontawesome5}
+\usepackage{tcolorbox}
+\usepackage{hyperref}
+
+% Define Corporate Colors
+\definecolor{hazard}{HTML}{FFD600}
+\definecolor{dark}{HTML}{2D2D2D}
+\definecolor{light}{HTML}{F5F5F5}
+
+\begin{document}
+
+% Background Design (Hazard Stripes & Blocks)
+\begin{tikzpicture}[remember picture, overlay]
+    % Main Dark Background for Header
+    \fill[dark] (current page.north west) rectangle ([yshift=-25cm]current page.north east);
+    
+    % Hazard Yellow Stripe ( Diagonal)
+    \fill[hazard] ([yshift=-8cm]current page.north west) -- ([yshift=-4cm]current page.north west) -- ([xshift=10cm, yshift=0cm]current page.north) -- ([xshift=4cm, yshift=0cm]current page.north) -- cycle;
+    
+    % Bottom Yellow Footer
+    \fill[hazard] (current page.south west) rectangle ([yshift=1.5cm]current page.south east);
+    
+    % Watermark / Decorative Elements
+    \node[opacity=0.05, right] at ([xshift=-2cm, yshift=-10cm]current page.center) {\fontsize{100}{100}\selectfont \textbf{RESPEL}};
+\end{tikzpicture}
+
+% Content Layer
+\vspace{2cm}
+\begin{center}
+    % Logo Placeholder (Assuming logo exists or using text fallback)
+    % \includegraphics[width=6cm]{../static/img/logo.png} 
+    \begin{tcolorbox}[colback=white, colframe=hazard, boxrule=2mm, arc=5mm, width=8cm, halign=center, sharp corners=south]
+        {\fontsize{30}{35}\selectfont \textbf{\color{dark}MAR DEL SUR}} \\
+        {\large \textbf{\color{gray}TRANSPORTE & LOGÍSTICA}}
+    \end{tcolorbox}
+\end{center}
+
+\vspace{2cm}
+
+\begin{center}
+    {\fontsize{40}{48}\selectfont \textbf{\color{white}SOLUCIONES EN\\TRANSPORTE ESPECIALIZADO}}
+    \vspace{0.5cm}
+    
+    {\Large \color{hazard} \textbf{SEGURIDAD I EFICIENCIA I CUMPLIMIENTO}}
+\end{center}
+
+\vspace{3cm}
+
+% Main Content Box
+\begin{center}
+\begin{tikzpicture}
+    \node[fill=white, inner sep=1cm, rounded corners=0.5cm, text width=16cm, shadow] (content) {
+        \section*{\color{dark}¿Quiénes Somos?}
+        Somos una empresa líder en el transporte de carga terrestre, especializados en el manejo de \textbf{Sustancias Peligrosas (Respel)} y \textbf{Residuos de Establecimientos de Atención de Salud (Reas)}. Nos caracteriza nuestro compromiso inquebrantable con la seguridad, el cumplimiento normativo y la satisfacción del cliente.
+        
+        \vspace{0.5cm}
+        
+        \section*{\color{dark}Nuestros Servicios}
+        \begin{itemize}
+            \item[\color{hazard}\faTruckMoving] \textbf{Transporte de Carga General:} Flota moderna para todo tipo de mercancías.
+            \item[\color{hazard}\faBiohazard] \textbf{Manejo de Respel y Reas:} Personal certificado y vehículos equipados según normativa.
+            \item[\color{hazard}\faWarehouse] \textbf{Almacenaje y Bodega:} Infraestructura propia para consolidación y almacenaje seguro.
+            \item[\color{hazard}\faFileContract] \textbf{Gestión Documental:} Asesoría en SIDREP y permisos sanitarios.
+        \end{itemize}
+        
+        \vspace{0.5cm}
+        
+        \section*{\color{dark}¿Por Qué Elegirnos?}
+        Contamos con \textbf{Resolución Sanitaria al día}, conductores profesionales con capacitación constante y un sistema de monitoreo GPS 24/7. Su carga viaja segura con Transporte Mar del Sur.
+    };
+\end{tikzpicture}
+\end{center}
+
+\vfill
+
+% Footer Info
+\begin{center}
+    \color{dark}
+    \textbf{CONTACTO COMERCIAL}\\
+    \vspace{0.2cm}
+    \faEnvelope \hspace{0.2cm} Transportesmardelsur@gmail.com \hspace{1cm} 
+    \faPhone \hspace{0.2cm} +56 9 42857502 \hspace{1cm}
+    \faMapMarker* \hspace{0.2cm} Cobertura Nacional, Chile
+\end{center}
+
+\newpage
+
+% --- FICHA TÉCNICA PAGE ---
+
+% Header Background for New Page
+\begin{tikzpicture}[remember picture, overlay]
+    \fill[dark] (current page.north west) rectangle ([yshift=-3cm]current page.north east);
+    \fill[hazard] ([yshift=-2.8cm]current page.north west) rectangle ([yshift=-3cm]current page.north east);
+    \node[white, right] at ([xshift=1cm, yshift=-1.5cm]current page.north west) {\fontsize{20}{24}\selectfont \textbf{FICHA TÉCNICA}};
+     \node[white, left] at ([xshift=-1cm, yshift=-1.5cm]current page.north east) {\large Versión N.1 - 23/10/2025};
+\end{tikzpicture}
+
+\vspace{2cm}
+
+\section*{\color{hazard}\faTruck \hspace{0.2cm} Descripción del Servicio}
+Transportes Mar del Sur Spa pone a su servicio su más completo transporte de mercancías y materiales. Especialistas en \textbf{REAS} y \textbf{Residuos Peligrosos}.
+\begin{itemize}
+    \item Transporte con \textbf{Resolución Sanitaria}.
+    \item Choferes capacitados por especialistas en prevención de riesgos.
+    \item Inscritos en ventanilla única sistema sectorial \textbf{SIDREP}.
+    \item Autorizados por el Ministerio de Salud.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\begin{tcolorbox}[colback=light, colframe=hazard, title=\textbf{CARACTERÍSTICAS PRINCIPALES}]
+    \begin{itemize}
+        \item \textbf{Capacidad:} 4 Toneladas.
+        \item \textbf{Resolución Sanitaria:} N° 2510389969.
+        \item \textbf{Seguridad:} Plan de contingencias y dispositivos de emergencia en ruta.
+        \item \textbf{Disposición Final:} Convenio con plantas de destino final.
+        \item \textbf{Cobertura:} Seguros de carga y accidentes vigentes (Año 2023-2025).
+        \item \textbf{Carrocería:} Barandas abatibles y rampla plana.
+        \item \textbf{Dimensiones:} Largo carrozable 5,5 mts.
+    \end{itemize}
+\end{tcolorbox}
+
+\vspace{0.5cm}
+
+\section*{\color{hazard}\faCogs \hspace{0.2cm} Especificaciones Técnicas del Vehículo}
+
+\begin{minipage}{0.48\textwidth}
+    \textbf{Desempeño}
+    \begin{enumerate}
+        \item \textbf{Potencia:} 150 CV
+        \item \textbf{Cilindrada:} 2.998 c.c.
+        \item \textbf{Torque:} 370 Nm @ 2.900 r.p.m
+        \item \textbf{Carga Útil:} 4.130 kg
+        \item \textbf{Peso Bruto:} 6.500 kg
+    \end{enumerate}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\textwidth}
+    \textbf{Seguridad y Confort}
+    \begin{itemize}
+        \item Sistema de Frenos \textbf{ABS + EBD}.
+        \item Certificación de Cabina \textbf{ECE R29}.
+        \item \textbf{Airbag} Conductor y Pasajero.
+        \item Sistema de Arranque-Parada (ISS).
+        \item Aire Acondicionado (Versión Full).
+    \end{itemize}
+\end{minipage}
+
+\vspace{1cm}
+
+\begin{center}
+    \includegraphics[width=14cm]{documentos/ficha_dims.png} \\
+    {\small \textit{Plano de Dimensiones del Vehículo}}
+\end{center}
+
+\vspace{0.5cm}
+
+
+\end{document}

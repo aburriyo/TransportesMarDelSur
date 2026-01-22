@@ -1,0 +1,228 @@
+{% extends "base.html" %}
+
+{% block title %}Certificaciones | DS 298, NCh 2190, SIDREP | Mar del Sur{% endblock %}
+{% block description %}Certificaciones oficiales: Resolución Sanitaria vigente, DS 298, NCh 2190, SIDREP. Cumplimiento normativo garantizado para transporte de sustancias peligrosas.{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="bg-gradient-to-br from-green-900 to-green-800 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="text-hazard font-bold tracking-widest uppercase text-sm">Cumplimiento Normativo</span>
+        <h1 class="text-5xl md:text-6xl font-black mt-4 mb-6">NUESTRAS CERTIFICACIONES</h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Todas las autorizaciones y certificaciones vigentes para operar con el más alto estándar de seguridad
+        </p>
+    </div>
+</section>
+
+<!-- Official Certifications Section -->
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-black text-dark mb-2">Certificaciones Oficiales</h2>
+            <p class="text-gray-600">Autorizaciones gubernamentales vigentes</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <!-- DS 298 -->
+            <div class="flex flex-col items-center p-6 border-2 border-green-700 rounded-lg bg-white hover:shadow-xl transition cursor-pointer"
+                 onclick="openModal('ds298')">
+                <img class="h-48 w-auto object-contain mb-4"
+                    src="{{ url_for('static', filename='img/certificado_ds298.svg') }}"
+                    alt="Certificado DS 298"
+                    loading="lazy">
+                <h3 class="text-xl font-bold text-dark text-center mb-2">Decreto Supremo 298</h3>
+                <p class="text-sm text-gray-600 text-center mb-3">Transporte de Cargas Peligrosas por Calles y Caminos</p>
+                <button class="text-green-700 font-semibold hover:underline">
+                    Ver detalles <i class="fas fa-chevron-right ml-1"></i>
+                </button>
+            </div>
+
+            <!-- SIDREP -->
+            <div class="flex flex-col items-center p-6 border-2 border-blue-700 rounded-lg bg-white hover:shadow-xl transition cursor-pointer"
+                 onclick="openModal('sidrep')">
+                <img class="h-48 w-auto object-contain mb-4"
+                    src="{{ url_for('static', filename='img/sidrep_certificado.svg') }}"
+                    alt="Certificado SIDREP"
+                    loading="lazy">
+                <h3 class="text-xl font-bold text-dark text-center mb-2">SIDREP</h3>
+                <p class="text-sm text-gray-600 text-center mb-3">Sistema de Declaración y Seguimiento de Residuos Peligrosos</p>
+                <button class="text-blue-700 font-semibold hover:underline">
+                    Ver detalles <i class="fas fa-chevron-right ml-1"></i>
+                </button>
+            </div>
+
+            <!-- Resolución Sanitaria -->
+            <div class="flex flex-col items-center p-6 border-2 border-teal-700 rounded-lg bg-white hover:shadow-xl transition cursor-pointer"
+                 onclick="openModal('resolucion')">
+                <img class="h-48 w-auto object-contain mb-4"
+                    src="{{ url_for('static', filename='img/resolucion_sanitaria.svg') }}"
+                    alt="Resolución Sanitaria"
+                    loading="lazy">
+                <h3 class="text-xl font-bold text-dark text-center mb-2">Resolución Sanitaria</h3>
+                <p class="text-sm text-gray-600 text-center mb-3">N° 2510389969 - Ministerio de Salud</p>
+                <button class="text-teal-700 font-semibold hover:underline">
+                    Ver detalles <i class="fas fa-chevron-right ml-1"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- NCh 2190 Hazard Classes Section -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-black text-dark mb-2">Clases de Peligrosidad NCh 2190</h2>
+            <p class="text-gray-600">Autorizados para transportar todas las clases de sustancias peligrosas</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            <!-- Clase 1 -->
+            <div class="flex flex-col items-center p-4 bg-white rounded-lg hover:shadow-lg transition cursor-pointer"
+                 onclick="openModal('clase1')">
+                <img class="h-32 w-auto object-contain mb-3"
+                    src="{{ url_for('static', filename='img/clase1_explosivos.svg') }}"
+                    alt="Clase 1 Explosivos"
+                    loading="lazy">
+                <h4 class="font-bold text-sm text-center text-dark">Clase 1</h4>
+                <p class="text-xs text-gray-600 text-center">Explosivos</p>
+            </div>
+
+            <!-- Clase 2 -->
+            <div class="flex flex-col items-center p-4 bg-white rounded-lg hover:shadow-lg transition cursor-pointer"
+                 onclick="openModal('clase2')">
+                <img class="h-32 w-auto object-contain mb-3"
+                    src="{{ url_for('static', filename='img/clase2_gases.svg') }}"
+                    alt="Clase 2 Gases"
+                    loading="lazy">
+                <h4 class="font-bold text-sm text-center text-dark">Clase 2</h4>
+                <p class="text-xs text-gray-600 text-center">Gases</p>
+            </div>
+
+            <!-- Clase 3 -->
+            <div class="flex flex-col items-center p-4 bg-white rounded-lg hover:shadow-lg transition cursor-pointer"
+                 onclick="openModal('clase3')">
+                <img class="h-32 w-auto object-contain mb-3"
+                    src="{{ url_for('static', filename='img/clase3_liquidos.svg') }}"
+                    alt="Clase 3 Líquidos Inflamables"
+                    loading="lazy">
+                <h4 class="font-bold text-sm text-center text-dark">Clase 3</h4>
+                <p class="text-xs text-gray-600 text-center">Líquidos Inflamables</p>
+            </div>
+
+            <!-- Clase 6 -->
+            <div class="flex flex-col items-center p-4 bg-white rounded-lg hover:shadow-lg transition cursor-pointer"
+                 onclick="openModal('clase6')">
+                <img class="h-32 w-auto object-contain mb-3"
+                    src="{{ url_for('static', filename='img/clase6_toxicos.svg') }}"
+                    alt="Clase 6 Tóxicos"
+                    loading="lazy">
+                <h4 class="font-bold text-sm text-center text-dark">Clase 6</h4>
+                <p class="text-xs text-gray-600 text-center">Tóxicos</p>
+            </div>
+
+            <!-- Clase 8 -->
+            <div class="flex flex-col items-center p-4 bg-white rounded-lg hover:shadow-lg transition cursor-pointer"
+                 onclick="openModal('clase8')">
+                <img class="h-32 w-auto object-contain mb-3"
+                    src="{{ url_for('static', filename='img/clase8_corrosivos.svg') }}"
+                    alt="Clase 8 Corrosivos"
+                    loading="lazy">
+                <h4 class="font-bold text-sm text-center text-dark">Clase 8</h4>
+                <p class="text-xs text-gray-600 text-center">Corrosivos</p>
+            </div>
+
+            <!-- Clase 9 -->
+            <div class="flex flex-col items-center p-4 bg-white rounded-lg hover:shadow-lg transition cursor-pointer"
+                 onclick="openModal('clase9')">
+                <img class="h-32 w-auto object-contain mb-3"
+                    src="{{ url_for('static', filename='img/clase9_varios.svg') }}"
+                    alt="Clase 9 Varios"
+                    loading="lazy">
+                <h4 class="font-bold text-sm text-center text-dark">Clase 9</h4>
+                <p class="text-xs text-gray-600 text-center">Varios</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Compliance Section -->
+<section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-8 border-2 border-green-200">
+            <div class="flex items-start space-x-6">
+                <div class="flex-shrink-0">
+                    <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center">
+                        <i class="fas fa-check-circle text-3xl text-white"></i>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-black text-dark mb-4">100% Cumplimiento Normativo</h2>
+                    <p class="text-gray-700 mb-4">
+                        Mantenemos todas nuestras certificaciones y permisos al día, asegurando el cumplimiento total de la normativa chilena para transporte de sustancias peligrosas y residuos hospitalarios.
+                    </p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-center">
+                            <i class="fas fa-shield-alt text-green-600 mr-3"></i>
+                            <span><strong>Resolución Sanitaria vigente</strong> para transporte RESPEL y REAS</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-file-contract text-green-600 mr-3"></i>
+                            <span><strong>Inscripción SIDREP</strong> en ventanilla única ministerial</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-graduation-cap text-green-600 mr-3"></i>
+                            <span><strong>Personal capacitado</strong> según DS 298 y NCh 2190</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clipboard-check text-green-600 mr-3"></i>
+                            <span><strong>Seguros vigentes</strong> UF 1.000 de cobertura</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-black mb-4">¿Necesitas verificar nuestras certificaciones?</h2>
+        <p class="text-lg text-gray-300 mb-8">
+            Contáctanos para solicitar copias de nuestras certificaciones vigentes
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/contacto" class="inline-block bg-hazard text-dark px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition shadow-xl">
+                <i class="fas fa-envelope mr-2"></i>
+                Contactar
+            </a>
+            <a href="/" class="inline-block bg-white text-dark px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-xl">
+                <i class="fas fa-home mr-2"></i>
+                Volver al Inicio
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Modal (from index.html - will be populated by carousel.js) -->
+<div id="cert-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 items-center justify-center p-4" onclick="closeModal(event)">
+    <div class="bg-white rounded-lg max-w-2xl w-full" onclick="event.stopPropagation()">
+        <div class="bg-gradient-to-r from-gray-800 to-gray-900 text-white p-6 rounded-t-lg flex justify-between items-start">
+            <div>
+                <h3 id="modal-title" class="text-2xl font-bold mb-2"></h3>
+                <p id="modal-subtitle" class="text-gray-300 text-sm"></p>
+            </div>
+            <button onclick="closeModal()" class="text-white hover:text-hazard text-2xl">&times;</button>
+        </div>
+        <div class="p-6">
+            <div class="flex items-center justify-center mb-6">
+                <img id="modal-image" src="" alt="" class="max-h-48 w-auto object-contain">
+            </div>
+            <div id="modal-description" class="text-gray-700 mb-4"></div>
+            <div id="modal-details" class="bg-gray-50 p-4 rounded-lg"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}

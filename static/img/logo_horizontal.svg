@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80">
+  <defs>
+    <linearGradient id="truckGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2D2D2D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a1a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gearGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E31E24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B91419;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Gear/Circle Background -->
+  <g transform="translate(40, 40)">
+    <!-- Outer gear teeth -->
+    <circle cx="0" cy="0" r="32" fill="url(#gearGrad)" opacity="0.9"/>
+    <path d="M 0 -35 L 4 -32 L 4 -28 L 0 -30 Z
+             M 24 -24 L 28 -20 L 25 -17 L 22 -20 Z
+             M 35 0 L 32 4 L 28 4 L 30 0 Z
+             M 24 24 L 20 28 L 17 25 L 20 22 Z
+             M 0 35 L -4 32 L -4 28 L 0 30 Z
+             M -24 24 L -28 20 L -25 17 L -22 20 Z
+             M -35 0 L -32 -4 L -28 -4 L -30 0 Z
+             M -24 -24 L -20 -28 L -17 -25 L -20 -22 Z"
+          fill="#B91419"/>
+    <!-- Inner circle -->
+    <circle cx="0" cy="0" r="18" fill="#fff" opacity="0.1"/>
+    <circle cx="0" cy="0" r="12" fill="#2D2D2D"/>
+  </g>
+
+  <!-- Truck silhouette -->
+  <g transform="translate(20, 35)">
+    <!-- Truck body -->
+    <rect x="0" y="0" width="35" height="20" rx="2" fill="url(#truckGrad)"/>
+    <!-- Truck cabin -->
+    <path d="M 35 5 L 48 5 L 48 20 L 35 20 Z" fill="url(#truckGrad)"/>
+    <path d="M 35 5 L 40 0 L 48 0 L 48 5 Z" fill="#3a3a3a"/>
+    <!-- Windows -->
+    <rect x="37" y="7" width="4" height="6" fill="#5a5a5a"/>
+    <rect x="43" y="7" width="4" height="6" fill="#5a5a5a"/>
+    <!-- Wheels -->
+    <circle cx="10" cy="23" r="4" fill="#2D2D2D" stroke="#FFD600" stroke-width="1.5"/>
+    <circle cx="10" cy="23" r="2" fill="#5a5a5a"/>
+    <circle cx="40" cy="23" r="4" fill="#2D2D2D" stroke="#FFD600" stroke-width="1.5"/>
+    <circle cx="40" cy="23" r="2" fill="#5a5a5a"/>
+    <!-- Hazard stripes on container -->
+    <path d="M 5 3 L 8 3 L 5 6 Z M 10 3 L 13 3 L 10 6 Z M 15 3 L 18 3 L 15 6 Z"
+          fill="#FFD600" opacity="0.8"/>
+  </g>
+
+  <!-- Text "MAR DEL SUR" -->
+  <g transform="translate(90, 45)">
+    <!-- MAR -->
+    <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="18" font-weight="900"
+          fill="#E31E24" letter-spacing="-0.5">MAR DEL</text>
+    <!-- SUR -->
+    <text x="0" y="20" font-family="Arial Black, sans-serif" font-size="24" font-weight="900"
+          fill="#2D2D2D" letter-spacing="1">SUR</text>
+  </g>
+
+  <!-- Hazard accent stripe -->
+  <rect x="85" y="52" width="3" height="15" fill="#FFD600" opacity="0.8"/>
+</svg>

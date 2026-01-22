@@ -1,0 +1,864 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="relative bg-gray-50 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+        <div class="relative z-10 pb-8 bg-gray-50 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+            <div class="pt-6 px-4 sm:px-6 lg:px-8"></div> <!-- Spacer -->
+
+            <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+                <div class="sm:text-center lg:text-left">
+                    <span
+                        class="inline-block bg-green-100 border border-green-400 rounded-full px-4 py-2 text-xs font-bold text-green-800 tracking-wide mb-4">
+                        <i class="fas fa-certificate text-green-600 mr-2"></i> RESOLUCIÓN SANITARIA N° 2510389969
+                    </span>
+                    <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl mb-6">
+                        <span class="block">Transporte Especializado</span>
+                        <span
+                            class="block text-transparent bg-clip-text bg-gradient-to-r from-dark to-gray-600">RESPEL y REAS</span>
+                    </h1>
+                    <p
+                        class="mt-3 text-base text-gray-600 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0 border-l-4 border-hazard pl-4">
+                        Soluciones integrales de logística terrestre con <strong>cumplimiento normativo garantizado</strong>. Transporte de sustancias peligrosas (RESPEL), residuos de establecimientos de salud (REAS) y carga general.
+                    </p>
+
+                    <!-- Key Stats -->
+                    <div class="mt-6 grid grid-cols-3 gap-4 max-w-lg">
+                        <div class="text-center">
+                            <div class="text-2xl font-black text-dark">4 TON</div>
+                            <div class="text-xs text-gray-500 uppercase font-semibold">Capacidad</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-black text-dark">24/7</div>
+                            <div class="text-xs text-gray-500 uppercase font-semibold">GPS Monitoreo</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-black text-dark">UF 1.000</div>
+                            <div class="text-xs text-gray-500 uppercase font-semibold">Seguros</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 sm:mt-10 sm:flex sm:justify-center lg:justify-start gap-4">
+                        <div class="rounded-md shadow">
+                            <a href="#contacto"
+                                class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-bold rounded-md text-dark bg-hazard hover:bg-yellow-400 md:py-4 md:text-lg md:px-10 transition shadow-lg transform hover:-translate-y-1">
+                                <i class="fas fa-calculator mr-2"></i> Solicitar Cotización
+                            </a>
+                        </div>
+                        <div class="mt-3 sm:mt-0 sm:ml-3">
+                            <a href="tel:+56942857502"
+                                class="w-full flex items-center justify-center px-8 py-3 border-2 border-dark text-base font-bold rounded-md text-dark bg-transparent hover:bg-dark hover:text-white md:py-4 md:text-lg md:px-10 transition">
+                                <i class="fas fa-phone mr-2"></i> Llamar Ahora
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+        <div class="h-56 w-full sm:h-72 md:h-96 lg:w-full lg:h-full relative">
+            <div class="absolute inset-0 bg-hazard opacity-10 z-10"></div>
+            <img class="w-full h-full object-cover" src="{{ url_for('static', filename='img/hero_truck.jpg') }}"
+                alt="Camión especializado para transporte de sustancias peligrosas RESPEL y REAS con resolución sanitaria en Puerto Montt Chile"
+                loading="eager">
+            <!-- Compliance Badge Overlay -->
+            <div
+                class="absolute bottom-10 left-10 bg-white p-6 shadow-2xl rounded-sm hidden lg:block z-20 border-l-8 border-hazard">
+                <p class="font-extrabold text-4xl text-dark">100%</p>
+                <p class="text-xs text-gray-500 uppercase font-bold tracking-widest mt-1">Cumplimiento<br>Normativo</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Certifications and Fleet Section -->
+<section id="certificaciones" class="py-16 bg-white border-b border-gray-200 overflow-hidden">
+    <div class="container mx-auto px-6 mb-10 text-center">
+        <span class="text-hazard font-bold tracking-widest uppercase">Certificaciones y Flota</span>
+        <h2 class="text-3xl font-black text-dark mt-2">Equipamiento y Normativa</h2>
+        <div class="w-24 h-1 bg-hazard mx-auto mt-4"></div>
+    </div>
+
+    <!-- Carousel Container -->
+    <div class="relative w-full">
+        <!-- Navigation Buttons -->
+        <button id="carousel-prev"
+                class="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-gray-800 rounded-full p-3 shadow-lg transition transform hover:scale-110">
+            <i class="fas fa-chevron-left text-xl"></i>
+        </button>
+        <button id="carousel-next"
+                class="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-gray-800 rounded-full p-3 shadow-lg transition transform hover:scale-110">
+            <i class="fas fa-chevron-right text-xl"></i>
+        </button>
+
+        <!-- Scrollable Carousel -->
+        <div class="carousel-container overflow-x-auto overflow-y-hidden cursor-grab" style="scrollbar-width: none; -ms-overflow-style: none;">
+            <div class="flex carousel-track items-center" style="width: fit-content;">
+            <!-- Original Set -->
+            <!-- Certificado DS 298 -->
+            <div class="flex-shrink-0 mx-6 w-48 h-48 flex items-center justify-center p-4 border-2 border-green-700 rounded-lg bg-white hover:shadow-xl transition cursor-pointer"
+                 onclick="openModal('ds298')" title="Click para ver detalles">
+                <img class="max-h-full max-w-full object-contain pointer-events-none"
+                    src="{{ url_for('static', filename='img/certificado_ds298.svg') }}"
+                    alt="Certificado DS 298 - Cumplimiento Normativo Transporte Cargas Peligrosas"
+                    loading="lazy"
+                    width="192"
+                    height="192">
+            </div>
+
+            <!-- Certificado SIDREP -->
+            <div class="flex-shrink-0 mx-6 w-48 h-48 flex items-center justify-center p-4 border-2 border-blue-700 rounded-lg bg-white hover:shadow-xl transition cursor-pointer"
+                 onclick="openModal('sidrep')" title="Click para ver detalles">
+                <img class="max-h-full max-w-full object-contain pointer-events-none"
+                    src="{{ url_for('static', filename='img/sidrep_certificado.svg') }}"
+                    alt="SIDREP - Sistema Declaración y Seguimiento Residuos Peligrosos"
+                    loading="lazy"
+                    width="192"
+                    height="192">
+            </div>
+
+            <!-- Resolución Sanitaria -->
+            <div class="flex-shrink-0 mx-6 w-56 h-48 flex items-center justify-center p-4 border-2 border-teal-700 rounded-lg bg-white hover:shadow-xl transition cursor-pointer"
+                 onclick="openModal('resolucion')" title="Click para ver detalles">
+                <img class="max-h-full max-w-full object-contain pointer-events-none"
+                    src="{{ url_for('static', filename='img/resolucion_sanitaria.svg') }}"
+                    alt="Resolución Sanitaria N° 2510389969 - Autorización Transporte RESPEL"
+                    loading="lazy"
+                    width="224"
+                    height="192">
+            </div>
+
+            <!-- NCh 2190 - Clase 1 Explosivos -->
+            <div class="flex-shrink-0 mx-6 w-40 h-40 flex items-center justify-center p-3 border border-orange-200 rounded-lg bg-white hover:shadow-md transition cursor-pointer"
+                 onclick="openModal('clase1')" title="Click para ver detalles">
+                <img class="max-h-full max-w-full object-contain pointer-events-none"
+                    src="{{ url_for('static', filename='img/clase1_explosivos.svg') }}"
+                    alt="NCh 2190 Clase 1 Explosivos - Materiales Peligrosos"
+                    loading="lazy"
+                    width="160"
+                    height="160">
+            </div>
+
+            <!-- NCh 2190 - Clase 2 Gases -->
+            <div class="flex-shrink-0 mx-6 w-40 h-40 flex items-center justify-center p-3 border border-red-200 rounded-lg bg-white hover:shadow-md transition cursor-pointer"
+                 onclick="openModal('clase2')" title="Click para ver detalles">
+                <img class="max-h-full max-w-full object-contain pointer-events-none"
+                    src="{{ url_for('static', filename='img/clase2_gases.svg') }}"
+                    alt="NCh 2190 Clase 2 Gases Inflamables - Sustancias Peligrosas"
+                    loading="lazy"
+                    width="160"
+                    height="160">
+            </div>
+
+            <!-- NCh 2190 - Clase 3 Líquidos Inflamables -->
+            <div class="flex-shrink-0 mx-6 w-40 h-40 flex items-center justify-center p-3 border border-red-200 rounded-lg bg-white hover:shadow-md transition cursor-pointer"
+                 onclick="openModal('clase3')" title="Click para ver detalles">
+                <img class="max-h-full max-w-full object-contain pointer-events-none"
+                    src="{{ url_for('static', filename='img/clase3_liquidos.svg') }}"
+                    alt="NCh 2190 Clase 3 Líquidos Inflamables - Transporte Sustancias Peligrosas"
+                    loading="lazy"
+                    width="160"
+                    height="160">
+            </div>
+
+            <!-- NCh 2190 - Clase 6 Tóxicos -->
+            <div class="flex-shrink-0 mx-6 w-40 h-40 flex items-center justify-center p-3 border border-gray-300 rounded-lg bg-white hover:shadow-md transition cursor-pointer"
+                 onclick="openModal('clase6')" title="Click para ver detalles">
+                <img class="max-h-full max-w-full object-contain pointer-events-none"
+                    src="{{ url_for('static', filename='img/clase6_toxicos.svg') }}"
+                    alt="NCh 2190 Clase 6 Tóxicos - Materiales Peligrosos"
+                    loading="lazy"
+                    width="160"
+                    height="160">
+            </div>
+
+            <!-- NCh 2190 - Clase 8 Corrosivos -->
+            <div class="flex-shrink-0 mx-6 w-40 h-40 flex items-center justify-center p-3 border border-gray-300 rounded-lg bg-white hover:shadow-md transition cursor-pointer"
+                 onclick="openModal('clase8')" title="Click para ver detalles">
+                <img class="max-h-full max-w-full object-contain pointer-events-none"
+                    src="{{ url_for('static', filename='img/clase8_corrosivos.svg') }}"
+                    alt="NCh 2190 Clase 8 Corrosivos - Sustancias Peligrosas"
+                    loading="lazy"
+                    width="160"
+                    height="160">
+            </div>
+
+            <!-- NCh 2190 - Clase 9 Varios -->
+            <div class="flex-shrink-0 mx-6 w-40 h-40 flex items-center justify-center p-3 border border-gray-300 rounded-lg bg-white hover:shadow-md transition cursor-pointer"
+                 onclick="openModal('clase9')" title="Click para ver detalles">
+                <img class="max-h-full max-w-full object-contain pointer-events-none"
+                    src="{{ url_for('static', filename='img/clase9_varios.svg') }}"
+                    alt="NCh 2190 Clase 9 Varios - Sustancias Peligrosas Varias"
+                    loading="lazy"
+                    width="160"
+                    height="160">
+            </div>
+
+            <!-- Duplicates for Infinite Scroll -->
+            <div class="flex-shrink-0 mx-6 w-48 h-48 flex items-center justify-center p-4 border-2 border-green-700 rounded-lg bg-white hover:shadow-xl transition cursor-pointer"
+                 onclick="openModal('ds298')" title="Click para ver detalles">
+                <img class="max-h-full max-w-full object-contain pointer-events-none"
+                    src="{{ url_for('static', filename='img/certificado_ds298.svg') }}"
+                    alt="Certificado DS 298"
+                    loading="lazy"
+                    width="192"
+                    height="192">
+            </div>
+            <div class="flex-shrink-0 mx-6 w-48 h-48 flex items-center justify-center p-4 border-2 border-blue-700 rounded-lg bg-white hover:shadow-xl transition cursor-pointer"
+                 onclick="openModal('sidrep')" title="Click para ver detalles">
+                <img class="max-h-full max-w-full object-contain pointer-events-none"
+                    src="{{ url_for('static', filename='img/sidrep_certificado.svg') }}"
+                    alt="Certificado SIDREP"
+                    loading="lazy"
+                    width="192"
+                    height="192">
+            </div>
+            <div class="flex-shrink-0 mx-6 w-56 h-48 flex items-center justify-center p-4 border-2 border-teal-700 rounded-lg bg-white hover:shadow-xl transition cursor-pointer"
+                 onclick="openModal('resolucion')" title="Click para ver detalles">
+                <img class="max-h-full max-w-full object-contain pointer-events-none"
+                    src="{{ url_for('static', filename='img/resolucion_sanitaria.svg') }}"
+                    alt="Resolución Sanitaria"
+                    loading="lazy"
+                    width="224"
+                    height="192">
+            </div>
+            <div class="flex-shrink-0 mx-6 w-40 h-40 flex items-center justify-center p-3 border border-orange-200 rounded-lg bg-white hover:shadow-md transition cursor-pointer"
+                 onclick="openModal('clase1')" title="Click para ver detalles">
+                <img class="max-h-full max-w-full object-contain pointer-events-none"
+                    src="{{ url_for('static', filename='img/clase1_explosivos.svg') }}"
+                    alt="Clase 1 Explosivos"
+                    loading="lazy"
+                    width="160"
+                    height="160">
+            </div>
+            <div class="flex-shrink-0 mx-6 w-40 h-40 flex items-center justify-center p-3 border border-red-200 rounded-lg bg-white hover:shadow-md transition cursor-pointer"
+                 onclick="openModal('clase2')" title="Click para ver detalles">
+                <img class="max-h-full max-w-full object-contain pointer-events-none"
+                    src="{{ url_for('static', filename='img/clase2_gases.svg') }}"
+                    alt="Clase 2 Gases"
+                    loading="lazy"
+                    width="160"
+                    height="160">
+            </div>
+            <div class="flex-shrink-0 mx-6 w-40 h-40 flex items-center justify-center p-3 border border-red-200 rounded-lg bg-white hover:shadow-md transition cursor-pointer"
+                 onclick="openModal('clase3')" title="Click para ver detalles">
+                <img class="max-h-full max-w-full object-contain pointer-events-none"
+                    src="{{ url_for('static', filename='img/clase3_liquidos.svg') }}"
+                    alt="Clase 3 Líquidos Inflamables"
+                    loading="lazy"
+                    width="160"
+                    height="160">
+            </div>
+            <div class="flex-shrink-0 mx-6 w-40 h-40 flex items-center justify-center p-3 border border-gray-300 rounded-lg bg-white hover:shadow-md transition cursor-pointer"
+                 onclick="openModal('clase6')" title="Click para ver detalles">
+                <img class="max-h-full max-w-full object-contain pointer-events-none"
+                    src="{{ url_for('static', filename='img/clase6_toxicos.svg') }}"
+                    alt="Clase 6 Tóxicos"
+                    loading="lazy"
+                    width="160"
+                    height="160">
+            </div>
+            <div class="flex-shrink-0 mx-6 w-40 h-40 flex items-center justify-center p-3 border border-gray-300 rounded-lg bg-white hover:shadow-md transition cursor-pointer"
+                 onclick="openModal('clase8')" title="Click para ver detalles">
+                <img class="max-h-full max-w-full object-contain pointer-events-none"
+                    src="{{ url_for('static', filename='img/clase8_corrosivos.svg') }}"
+                    alt="Clase 8 Corrosivos"
+                    loading="lazy"
+                    width="160"
+                    height="160">
+            </div>
+            <div class="flex-shrink-0 mx-6 w-40 h-40 flex items-center justify-center p-3 border border-gray-300 rounded-lg bg-white hover:shadow-md transition cursor-pointer"
+                 onclick="openModal('clase9')" title="Click para ver detalles">
+                <img class="max-h-full max-w-full object-contain pointer-events-none"
+                    src="{{ url_for('static', filename='img/clase9_varios.svg') }}"
+                    alt="Clase 9 Varios"
+                    loading="lazy"
+                    width="160"
+                    height="160">
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+<!-- Certification Modal -->
+<div id="cert-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 items-center justify-center p-4"
+     onclick="if(event.target === this) closeModal()">
+    <div class="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
+         onclick="event.stopPropagation()">
+        <!-- Modal Header -->
+        <div class="bg-gradient-to-r from-gray-800 to-gray-900 text-white p-6 rounded-t-lg relative">
+            <button onclick="closeModal()"
+                    class="absolute top-4 right-4 text-white hover:text-hazard transition text-2xl">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="flex items-center space-x-4">
+                <div id="modal-icon" class="text-4xl">
+                    <!-- Icon will be inserted here -->
+                </div>
+                <div>
+                    <h3 id="modal-title" class="text-2xl font-bold"></h3>
+                    <p id="modal-subtitle" class="text-gray-300 text-sm mt-1"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="p-6">
+            <p id="modal-description" class="text-gray-700 mb-6 leading-relaxed"></p>
+
+            <h4 class="font-bold text-lg mb-3 text-gray-800">
+                <i class="fas fa-info-circle text-blue-600 mr-2"></i>
+                Detalles
+            </h4>
+            <ul id="modal-details" class="space-y-2 text-gray-700">
+                <!-- Details will be inserted here -->
+            </ul>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="bg-gray-50 p-4 rounded-b-lg flex justify-end">
+            <button onclick="closeModal()"
+                    class="bg-hazard hover:bg-yellow-400 text-dark font-bold py-2 px-6 rounded transition">
+                Cerrar
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Why Choose Us Section -->
+<section class="py-16 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-black text-white mb-3">¿Por Qué Transporte Mar del Sur?</h2>
+            <p class="text-gray-400 max-w-2xl mx-auto">Cumplimiento normativo y seguridad garantizada en cada servicio</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Item 1 -->
+            <div class="text-center group">
+                <div class="bg-hazard w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
+                    <i class="fas fa-shield-check text-2xl text-dark"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-2">Resolución Sanitaria Vigente</h3>
+                <p class="text-sm text-gray-400">N° 2510389969 autorizada por el Ministerio de Salud para transporte de sustancias peligrosas</p>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="text-center group">
+                <div class="bg-hazard w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
+                    <i class="fas fa-clipboard-check text-2xl text-dark"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-2">Inscripción SIDREP</h3>
+                <p class="text-sm text-gray-400">Registrados en ventanilla única del sistema sectorial para gestión de residuos peligrosos</p>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="text-center group">
+                <div class="bg-hazard w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
+                    <i class="fas fa-graduation-cap text-2xl text-dark"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-2">Choferes Certificados</h3>
+                <p class="text-sm text-gray-400">Personal capacitado por especialistas en prevención de riesgos y manejo de sustancias peligrosas</p>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="text-center group">
+                <div class="bg-hazard w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
+                    <i class="fas fa-satellite-dish text-2xl text-dark"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-2">Monitoreo GPS 24/7</h3>
+                <p class="text-sm text-gray-400">Seguimiento en tiempo real de su carga con sistema de rastreo satelital permanente</p>
+            </div>
+        </div>
+
+        <!-- Additional Row -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 max-w-4xl mx-auto">
+            <!-- Item 5 -->
+            <div class="text-center group">
+                <div class="bg-hazard w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
+                    <i class="fas fa-warehouse text-2xl text-dark"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-2">Bodega Propia</h3>
+                <p class="text-sm text-gray-400">Infraestructura para almacenaje y consolidación de mercancías</p>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="text-center group">
+                <div class="bg-hazard w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
+                    <i class="fas fa-file-contract text-2xl text-dark"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-2">Seguros Vigentes</h3>
+                <p class="text-sm text-gray-400">Cobertura de carga y accidentes hasta UF 1.000</p>
+            </div>
+
+            <!-- Item 7 -->
+            <div class="text-center group">
+                <div class="bg-hazard w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
+                    <i class="fas fa-map-marked-alt text-2xl text-dark"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-2">Cobertura Nacional</h3>
+                <p class="text-sm text-gray-400">Servicios desde Puerto Montt a todo Chile</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Main Services Section -->
+<section id="servicios" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <span class="text-hazard font-bold tracking-widest uppercase">Soluciones Integrales</span>
+            <h2 class="text-4xl font-black text-dark mt-2">NUESTROS SERVICIOS</h2>
+            <div class="w-24 h-1 bg-hazard mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Transport Service -->
+            <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer">
+                <div class="absolute inset-0 bg-dark opacity-40 group-hover:opacity-30 transition z-10"></div>
+                <img class="w-full h-80 object-cover transform group-hover:scale-110 transition duration-700"
+                    src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                    alt="Servicio transporte RESPEL sustancias peligrosas con resolución sanitaria Chile"
+                    loading="lazy">
+                <div class="absolute bottom-0 left-0 p-8 z-20 w-full bg-gradient-to-t from-black to-transparent">
+                    <div class="flex items-center space-x-4 mb-2">
+                        <div class="bg-hazard p-3 rounded-full text-dark">
+                            <i class="fas fa-biohazard text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Transporte RESPEL</h3>
+                    </div>
+                    <p class="text-gray-200 text-sm mb-4">
+                        Sustancias peligrosas y REAS con resolución sanitaria vigente. Personal certificado, vehículos equipados según normativa DS 298.
+                    </p>
+                    <span class="text-hazard font-bold text-sm uppercase tracking-wide group-hover:underline">Más
+                        información <i class="fas fa-arrow-right ml-1"></i></span>
+                </div>
+            </div>
+
+            <!-- General Cargo -->
+            <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer">
+                <div class="absolute inset-0 bg-dark opacity-40 group-hover:opacity-30 transition z-10"></div>
+                <img class="w-full h-80 object-cover transform group-hover:scale-110 transition duration-700"
+                    src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                    alt="Servicio transporte carga general 4 toneladas Puerto Montt Chile"
+                    loading="lazy">
+                <div class="absolute bottom-0 left-0 p-8 z-20 w-full bg-gradient-to-t from-black to-transparent">
+                    <div class="flex items-center space-x-4 mb-2">
+                        <div class="bg-hazard p-3 rounded-full text-dark">
+                            <i class="fas fa-truck-moving text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Carga General</h3>
+                    </div>
+                    <p class="text-gray-200 text-sm mb-4">
+                        Flota moderna de 4 toneladas con carrocería de barandas abatibles. Largo carrozable 5,5 metros. GPS 24/7.
+                    </p>
+                    <span class="text-hazard font-bold text-sm uppercase tracking-wide group-hover:underline">Más
+                        información <i class="fas fa-arrow-right ml-1"></i></span>
+                </div>
+            </div>
+
+            <!-- Warehousing Service -->
+            <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer">
+                <div class="absolute inset-0 bg-dark opacity-40 group-hover:opacity-30 transition z-10"></div>
+                <img class="w-full h-80 object-cover transform group-hover:scale-110 transition duration-700"
+                    src="{{ url_for('static', filename='img/warehouse.jpg') }}"
+                    alt="Servicio almacenaje y bodega para sustancias peligrosas Puerto Montt"
+                    loading="lazy">
+                <div class="absolute bottom-0 left-0 p-8 z-20 w-full bg-gradient-to-t from-black to-transparent">
+                    <div class="flex items-center space-x-4 mb-2">
+                        <div class="bg-hazard p-3 rounded-full text-dark">
+                            <i class="fas fa-warehouse text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Almacenaje y Bodega</h3>
+                    </div>
+                    <p class="text-gray-200 text-sm mb-4">
+                        Infraestructura propia para recepción, consolidación y almacenaje seguro. Gestión de inventario profesional.
+                    </p>
+                    <span class="text-hazard font-bold text-sm uppercase tracking-wide group-hover:underline">Más
+                        información <i class="fas fa-arrow-right ml-1"></i></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Services Row -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+            <!-- Document Management -->
+            <div class="bg-light p-8 rounded-lg border-l-4 border-hazard hover:shadow-lg transition">
+                <div class="flex items-start space-x-4">
+                    <div class="bg-hazard p-4 rounded-lg">
+                        <i class="fas fa-file-signature text-2xl text-dark"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-dark mb-2">Gestión Documental</h3>
+                        <p class="text-gray-600 text-sm mb-3">Asesoría en trámites SIDREP, permisos sanitarios y documentación para transporte de residuos peligrosos.</p>
+                        <ul class="text-sm text-gray-500 space-y-1">
+                            <li><i class="fas fa-check text-hazard mr-2"></i>Inscripción ventanilla única SIDREP</li>
+                            <li><i class="fas fa-check text-hazard mr-2"></i>Gestión de permisos sanitarios</li>
+                            <li><i class="fas fa-check text-hazard mr-2"></i>Documentación de transporte</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Final Disposal -->
+            <div class="bg-light p-8 rounded-lg border-l-4 border-hazard hover:shadow-lg transition">
+                <div class="flex items-start space-x-4">
+                    <div class="bg-hazard p-4 rounded-lg">
+                        <i class="fas fa-recycle text-2xl text-dark"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-dark mb-2">Disposición Final</h3>
+                        <p class="text-gray-600 text-sm mb-3">Convenios activos con plantas autorizadas para el destino final de residuos peligrosos y REAS.</p>
+                        <ul class="text-sm text-gray-500 space-y-1">
+                            <li><i class="fas fa-check text-hazard mr-2"></i>Plantas autorizadas y certificadas</li>
+                            <li><i class="fas fa-check text-hazard mr-2"></i>Trazabilidad completa del proceso</li>
+                            <li><i class="fas fa-check text-hazard mr-2"></i>Certificados de disposición final</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Grid (Renamed ID from servicios to features to avoid conflict, keeping accessible via scroll if needed) -->
+<div class="bg-light py-20" id="caracteristicas">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            <div class="border-b-4 border-transparent hover:border-hazard transition pb-8 group cursor-pointer">
+                <div
+                    class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition">
+                    <i class="fas fa-file-medical-alt text-3xl text-gray-400 group-hover:text-hazard transition"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-2">Res. Sanitaria</h3>
+                <p class="text-sm text-gray-500 px-4">Resolución al día para transporte de sustancias peligrosas.</p>
+            </div>
+            <div class="border-b-4 border-transparent hover:border-hazard transition pb-8 group cursor-pointer">
+                <div
+                    class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition">
+                    <i class="fas fa-id-card text-3xl text-gray-400 group-hover:text-hazard transition"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-2">Choferes Pro</h3>
+                <p class="text-sm text-gray-500 px-4">Capacitados por especialistas en prevención.</p>
+            </div>
+            <div class="border-b-4 border-transparent hover:border-hazard transition pb-8 group cursor-pointer">
+                <div
+                    class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition">
+                    <i class="fas fa-truck-moving text-3xl text-gray-400 group-hover:text-hazard transition"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-2">SIDREP</h3>
+                <p class="text-sm text-gray-500 px-4">Inscritos en ventanilla única sistema sectorial.</p>
+            </div>
+            <div class="border-b-4 border-transparent hover:border-hazard transition pb-8 group cursor-pointer">
+                <div
+                    class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition">
+                    <i class="fas fa-recycle text-3xl text-gray-400 group-hover:text-hazard transition"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-2">Destino Final</h3>
+                <p class="text-sm text-gray-500 px-4">Convenios activos para disposición final de residuos.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Technical Specifications Section -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+            <span class="text-hazard font-bold tracking-widest uppercase">Información Técnica</span>
+            <h2 class="text-3xl font-black text-dark mt-2">Especificaciones del Vehículo</h2>
+            <div class="w-24 h-1 bg-hazard mx-auto mt-4"></div>
+        </div>
+
+        <div class="max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Left Column: Performance -->
+                <div class="bg-light p-8 rounded-lg border-t-4 border-hazard">
+                    <h3 class="text-xl font-bold text-dark mb-6 flex items-center">
+                        <i class="fas fa-tachometer-alt text-hazard mr-3"></i>
+                        Capacidad y Desempeño
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center border-b border-gray-300 pb-3">
+                            <span class="text-gray-600 font-semibold">Carga Útil</span>
+                            <span class="text-dark font-bold">4.130 kg</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-300 pb-3">
+                            <span class="text-gray-600 font-semibold">Peso Bruto</span>
+                            <span class="text-dark font-bold">6.500 kg</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-300 pb-3">
+                            <span class="text-gray-600 font-semibold">Potencia</span>
+                            <span class="text-dark font-bold">150 CV</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-300 pb-3">
+                            <span class="text-gray-600 font-semibold">Cilindrada</span>
+                            <span class="text-dark font-bold">2.998 c.c.</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-semibold">Torque</span>
+                            <span class="text-dark font-bold">370 Nm @ 2.900 rpm</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Dimensions & Safety -->
+                <div class="bg-light p-8 rounded-lg border-t-4 border-hazard">
+                    <h3 class="text-xl font-bold text-dark mb-6 flex items-center">
+                        <i class="fas fa-ruler-combined text-hazard mr-3"></i>
+                        Dimensiones y Seguridad
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center border-b border-gray-300 pb-3">
+                            <span class="text-gray-600 font-semibold">Carrocería</span>
+                            <span class="text-dark font-bold">Barandas abatibles</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-300 pb-3">
+                            <span class="text-gray-600 font-semibold">Largo carrozable</span>
+                            <span class="text-dark font-bold">5,5 metros</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-300 pb-3">
+                            <span class="text-gray-600 font-semibold">Sistema de Frenos</span>
+                            <span class="text-dark font-bold">ABS + EBD</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-300 pb-3">
+                            <span class="text-gray-600 font-semibold">Seguridad</span>
+                            <span class="text-dark font-bold">Airbag conductor/pasajero</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-semibold">Certificación</span>
+                            <span class="text-dark font-bold">ECE R29</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Features -->
+            <div class="mt-8 bg-gradient-to-r from-hazard to-yellow-300 p-6 rounded-lg">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                    <div>
+                        <i class="fas fa-tools text-2xl text-dark mb-2"></i>
+                        <p class="text-sm font-bold text-dark">Plan de Contingencias</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-satellite-dish text-2xl text-dark mb-2"></i>
+                        <p class="text-sm font-bold text-dark">GPS 24/7</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-fire-extinguisher text-2xl text-dark mb-2"></i>
+                        <p class="text-sm font-bold text-dark">Equipamiento Emergencia</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-snowflake text-2xl text-dark mb-2"></i>
+                        <p class="text-sm font-bold text-dark">Aire Acondicionado</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+            <span class="text-hazard font-bold tracking-widest uppercase">Preguntas Frecuentes</span>
+            <h2 class="text-3xl font-black text-dark mt-2">¿Tienes Dudas?</h2>
+            <div class="w-24 h-1 bg-hazard mx-auto mt-4"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto space-y-4">
+            <!-- FAQ Item 1 -->
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                <button class="w-full text-left p-6 focus:outline-none hover:bg-gray-50 transition" onclick="this.nextElementSibling.classList.toggle('hidden')">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-bold text-dark text-lg">¿Cuentan con resolución sanitaria vigente?</h3>
+                        <i class="fas fa-chevron-down text-hazard"></i>
+                    </div>
+                </button>
+                <div class="hidden px-6 pb-6">
+                    <p class="text-gray-600">Sí, contamos con Resolución Sanitaria N° 2510389969 emitida por el Ministerio de Salud, vigente y al día. Estamos autorizados para el transporte de sustancias peligrosas (RESPEL) y residuos de establecimientos de atención de salud (REAS).</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                <button class="w-full text-left p-6 focus:outline-none hover:bg-gray-50 transition" onclick="this.nextElementSibling.classList.toggle('hidden')">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-bold text-dark text-lg">¿Qué capacidad de carga manejan?</h3>
+                        <i class="fas fa-chevron-down text-hazard"></i>
+                    </div>
+                </button>
+                <div class="hidden px-6 pb-6">
+                    <p class="text-gray-600">Nuestros vehículos tienen una capacidad de carga útil de 4.130 kg (4 toneladas), con carrocería de barandas abatibles y largo carrozable de 5,5 metros. Ideal para cargas voluminosas y sustancias peligrosas.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                <button class="w-full text-left p-6 focus:outline-none hover:bg-gray-50 transition" onclick="this.nextElementSibling.classList.toggle('hidden')">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-bold text-dark text-lg">¿Tienen cobertura de seguros?</h3>
+                        <i class="fas fa-chevron-down text-hazard"></i>
+                    </div>
+                </button>
+                <div class="hidden px-6 pb-6">
+                    <p class="text-gray-600">Sí, contamos con seguros de carga y accidentes vigentes con cobertura hasta UF 1.000. Todos nuestros servicios están respaldados por pólizas actualizadas (período 2023-2025), garantizando la protección de su mercancía.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                <button class="w-full text-left p-6 focus:outline-none hover:bg-gray-50 transition" onclick="this.nextElementSibling.classList.toggle('hidden')">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-bold text-dark text-lg">¿Están inscritos en SIDREP?</h3>
+                        <i class="fas fa-chevron-down text-hazard"></i>
+                    </div>
+                </button>
+                <div class="hidden px-6 pb-6">
+                    <p class="text-gray-600">Sí, estamos inscritos en la ventanilla única del sistema sectorial SIDREP (Sistema de Declaración y Seguimiento de Residuos Peligrosos). Además, ofrecemos asesoría en trámites y gestión documental para nuestros clientes.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                <button class="w-full text-left p-6 focus:outline-none hover:bg-gray-50 transition" onclick="this.nextElementSibling.classList.toggle('hidden')">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-bold text-dark text-lg">¿Qué cobertura geográfica tienen?</h3>
+                        <i class="fas fa-chevron-down text-hazard"></i>
+                    </div>
+                </button>
+                <div class="hidden px-6 pb-6">
+                    <p class="text-gray-600">Nuestra base de operaciones está en Puerto Montt, Región de Los Lagos, pero ofrecemos cobertura nacional a lo largo de todo Chile. Todos nuestros servicios incluyen monitoreo GPS 24/7 para seguimiento en tiempo real.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                <button class="w-full text-left p-6 focus:outline-none hover:bg-gray-50 transition" onclick="this.nextElementSibling.classList.toggle('hidden')">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-bold text-dark text-lg">¿Cuál es el tiempo de respuesta para cotizaciones?</h3>
+                        <i class="fas fa-chevron-down text-hazard"></i>
+                    </div>
+                </button>
+                <div class="hidden px-6 pb-6">
+                    <p class="text-gray-600">Respondemos cotizaciones en un plazo máximo de 24 horas. La disponibilidad de nuestros camiones es de 24 horas posterior a la confirmación del servicio. Para urgencias, puede contactarnos directamente al +56 9 42857502.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contacto" class="py-20 bg-dark text-white relative">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h2 class="text-3xl font-bold mb-4">¿Necesitas transporte especializado?</h2>
+                <p class="text-gray-400 text-lg mb-8 max-w-lg">
+                    Contáctanos hoy para una cotización rápida. Respondemos a la brevedad con soluciones a medida.
+                </p>
+
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-gray-800 rounded flex items-center justify-center text-hazard">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500 font-bold uppercase">Email</p>
+                            <a href="mailto:Transportesmardelsur@gmail.com"
+                                class="text-lg font-semibold hover:text-hazard transition">Transportesmardelsur@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-gray-800 rounded flex items-center justify-center text-hazard">
+                            <i class="fas fa-phone-alt text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500 font-bold uppercase">Teléfono</p>
+                            <a href="tel:+56942857502" class="text-lg font-semibold hover:text-hazard transition">+56 9
+                                42857502</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:w-5/12 bg-white rounded-lg p-8 shadow-2xl text-dark w-full">
+                <h3 class="text-2xl font-bold text-dark mb-6">Solicitar Cotización</h3>
+                <form>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2 uppercase" for="name">Nombre Contacto *</label>
+                        <input
+                            class="shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:border-hazard"
+                            id="name" type="text" placeholder="Nombre y apellido" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2 uppercase" for="company">Empresa *</label>
+                        <input
+                            class="shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:border-hazard"
+                            id="company" type="text" placeholder="Razón social" required>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label class="block text-gray-700 text-sm font-bold mb-2 uppercase" for="phone">Teléfono *</label>
+                            <input
+                                class="shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:border-hazard"
+                                id="phone" type="tel" placeholder="+56 9 XXXX XXXX" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 text-sm font-bold mb-2 uppercase" for="email">Email *</label>
+                            <input
+                                class="shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:border-hazard"
+                                id="email" type="email" placeholder="email@empresa.cl" required>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2 uppercase" for="service">Tipo de Servicio *</label>
+                        <select
+                            class="shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:border-hazard"
+                            id="service" required>
+                            <option value="">Seleccione un servicio</option>
+                            <option value="respel">Transporte RESPEL (Sustancias Peligrosas)</option>
+                            <option value="reas">Transporte REAS (Residuos Salud)</option>
+                            <option value="general">Carga General</option>
+                            <option value="almacenaje">Almacenaje y Bodega</option>
+                            <option value="gestion">Gestión Documental SIDREP</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label class="block text-gray-700 text-sm font-bold mb-2 uppercase" for="origin">Origen</label>
+                            <input
+                                class="shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:border-hazard"
+                                id="origin" type="text" placeholder="Ciudad origen">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 text-sm font-bold mb-2 uppercase" for="destination">Destino</label>
+                            <input
+                                class="shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:border-hazard"
+                                id="destination" type="text" placeholder="Ciudad destino">
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-gray-700 text-sm font-bold mb-2 uppercase" for="message">Detalles Adicionales</label>
+                        <textarea
+                            class="shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:border-hazard"
+                            id="message" rows="3" placeholder="Peso estimado, tipo de residuo, frecuencia, etc."></textarea>
+                    </div>
+                    <button
+                        class="bg-hazard w-full hover:bg-yellow-400 text-dark font-bold py-3 px-4 rounded focus:outline-none focus:shadow-outline transition transform hover:scale-[1.01]"
+                        type="button">
+                        <i class="fas fa-paper-plane mr-2"></i> ENVIAR SOLICITUD
+                    </button>
+                    <p class="text-xs text-gray-500 mt-3 text-center">* Campos obligatorios. Respuesta en menos de 24 horas.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

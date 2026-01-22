@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Red diamond background (Clase 3 - Líquidos Inflamables) -->
+  <g transform="translate(100, 100) rotate(45)">
+    <rect x="-70" y="-70" width="140" height="140" fill="#E31E24" stroke="black" stroke-width="3"/>
+    <rect x="-65" y="-65" width="130" height="130" fill="none" stroke="white" stroke-width="2"/>
+  </g>
+
+  <!-- Flame symbol -->
+  <g transform="translate(100, 85)">
+    <path d="M 0 -35 Q -8 -28 -12 -15 Q -14 -5 -12 5 Q -8 15 0 22 Q 8 15 12 5 Q 14 -5 12 -15 Q 8 -28 0 -35 Z"
+          fill="white" stroke="black" stroke-width="2"/>
+    <path d="M 0 -25 Q -5 -20 -7 -10 Q -8 -3 -6 3 Q -3 10 0 14 Q 3 10 6 3 Q 8 -3 7 -10 Q 5 -20 0 -25 Z"
+          fill="#E31E24" stroke="black" stroke-width="1"/>
+    <!-- Inner flame detail -->
+    <path d="M 0 -18 Q -3 -15 -4 -8 Q -4 -2 -2 2 Q 0 6 0 6 Q 0 6 2 2 Q 4 -2 4 -8 Q 3 -15 0 -18 Z"
+          fill="white"/>
+  </g>
+
+  <!-- Text -->
+  <text x="100" y="140" font-family="Arial Black, sans-serif" font-size="10" font-weight="bold"
+        fill="white" text-anchor="middle">LÍQUIDOS</text>
+  <text x="100" y="152" font-family="Arial Black, sans-serif" font-size="10" font-weight="bold"
+        fill="white" text-anchor="middle">INFLAMABLES</text>
+
+  <!-- Class number -->
+  <g transform="translate(100, 172)">
+    <rect x="-12" y="-12" width="24" height="20" fill="white" stroke="black" stroke-width="1.5"/>
+    <text x="0" y="4" font-family="Arial Black, sans-serif" font-size="16" font-weight="bold"
+          fill="black" text-anchor="middle">3</text>
+  </g>
+</svg>

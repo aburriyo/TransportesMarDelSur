@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- White diamond with black stripes (Clase 9 - Varios) -->
+  <g transform="translate(100, 100) rotate(45)">
+    <rect x="-70" y="-70" width="140" height="140" fill="white" stroke="black" stroke-width="3"/>
+
+    <!-- Vertical stripes in top half -->
+    <path d="M -50 -70 L -50 0" stroke="black" stroke-width="8"/>
+    <path d="M -30 -70 L -30 0" stroke="black" stroke-width="8"/>
+    <path d="M -10 -70 L -10 0" stroke="black" stroke-width="8"/>
+    <path d="M 10 -70 L 10 0" stroke="black" stroke-width="8"/>
+    <path d="M 30 -70 L 30 0" stroke="black" stroke-width="8"/>
+    <path d="M 50 -70 L 50 0" stroke="black" stroke-width="8"/>
+
+    <!-- Clip to top half -->
+    <path d="M -70 0 L 0 -70 L 70 0 Z" fill="white" opacity="0.01"/>
+
+    <!-- Inner border -->
+    <rect x="-65" y="-65" width="130" height="130" fill="none" stroke="black" stroke-width="1"/>
+  </g>
+
+  <!-- Underlined text "VARIOS" in black -->
+  <g transform="translate(100, 80)">
+    <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="20" font-weight="bold"
+          fill="black" text-anchor="middle">VARIOS</text>
+    <line x1="-35" y1="5" x2="35" y2="5" stroke="black" stroke-width="2"/>
+  </g>
+
+  <!-- Subtitle -->
+  <text x="100" y="145" font-family="Arial, sans-serif" font-size="10" font-weight="bold"
+        fill="black" text-anchor="middle">SUSTANCIAS PELIGROSAS</text>
+  <text x="100" y="157" font-family="Arial, sans-serif" font-size="10" font-weight="bold"
+        fill="black" text-anchor="middle">VARIAS</text>
+
+  <!-- Class number -->
+  <g transform="translate(100, 178)">
+    <rect x="-12" y="-12" width="24" height="20" fill="white" stroke="black" stroke-width="1.5"/>
+    <text x="0" y="4" font-family="Arial Black, sans-serif" font-size="16" font-weight="bold"
+          fill="black" text-anchor="middle">9</text>
+  </g>
+</svg>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 70">
+  <defs>
+    <linearGradient id="modernBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD600;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="modernTruck" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2D2D2D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a1a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded badge background -->
+  <rect x="5" y="5" width="60" height="60" rx="10" fill="url(#modernBg)"/>
+
+  <!-- Truck inside badge -->
+  <g transform="translate(15, 28)">
+    <!-- Container with hazard pattern -->
+    <rect x="0" y="5" width="28" height="14" rx="1" fill="#2D2D2D"/>
+    <!-- Hazard diagonal stripes -->
+    <defs>
+      <pattern id="hazardPattern" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse">
+        <rect x="0" y="0" width="2" height="4" fill="#FFD600"/>
+        <rect x="2" y="0" width="2" height="4" fill="#2D2D2D"/>
+      </pattern>
+    </defs>
+    <rect x="2" y="7" width="24" height="3" fill="url(#hazardPattern)" transform="skewX(-15)"/>
+
+    <!-- Cabin -->
+    <path d="M 28 8 L 36 8 L 36 19 L 28 19 Z" fill="url(#modernTruck)"/>
+    <path d="M 28 8 L 31 4 L 36 4 L 36 8 Z" fill="#3a3a3a"/>
+    <!-- Windows -->
+    <rect x="29.5" y="10" width="2.5" height="4" fill="#5a5a5a" rx="0.5"/>
+    <rect x="33" y="10" width="2.5" height="4" fill="#5a5a5a" rx="0.5"/>
+
+    <!-- Wheels -->
+    <circle cx="7" cy="21" r="3" fill="#1a1a1a" stroke="#FFD600" stroke-width="1.5"/>
+    <circle cx="7" cy="21" r="1.2" fill="#FFD600"/>
+    <circle cx="30" cy="21" r="3" fill="#1a1a1a" stroke="#FFD600" stroke-width="1.5"/>
+    <circle cx="30" cy="21" r="1.2" fill="#FFD600"/>
+
+    <!-- Motion lines -->
+    <line x1="4" y1="2" x2="0" y2="2" stroke="#2D2D2D" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+    <line x1="6" y1="0" x2="2" y2="0" stroke="#2D2D2D" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+  </g>
+
+  <!-- Company Name -->
+  <g transform="translate(75, 25)">
+    <!-- TRANSPORTE -->
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="11" font-weight="700"
+          fill="#2D2D2D" letter-spacing="1.5">TRANSPORTE</text>
+
+    <!-- MAR DEL SUR -->
+    <text x="0" y="18" font-family="Arial Black, sans-serif" font-size="20" font-weight="900"
+          fill="#2D2D2D" letter-spacing="0.5">MAR DEL</text>
+    <text x="0" y="38" font-family="Arial Black, sans-serif" font-size="24" font-weight="900"
+          fill="#2D2D2D" letter-spacing="1">SUR</text>
+  </g>
+
+  <!-- Accent elements -->
+  <rect x="75" y="42" width="30" height="2" fill="#FFD600" rx="1"/>
+  <circle cx="230" cy="15" r="3" fill="#FFD600" opacity="0.6"/>
+  <circle cx="240" cy="10" r="2" fill="#FFD600" opacity="0.4"/>
+</svg>

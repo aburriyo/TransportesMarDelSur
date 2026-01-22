@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+
+{% block title %}Preguntas Frecuentes | FAQ | Mar del Sur{% endblock %}
+{% block description %}Respuestas a las preguntas más frecuentes sobre nuestros servicios de transporte RESPEL, REAS, certificaciones, cobertura y cotizaciones.{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="bg-gradient-to-br from-purple-900 to-purple-800 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="text-hazard font-bold tracking-widest uppercase text-sm">Centro de Ayuda</span>
+        <h1 class="text-5xl md:text-6xl font-black mt-4 mb-6">PREGUNTAS FRECUENTES</h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Encuentra respuestas rápidas a las dudas más comunes sobre nuestros servicios
+        </p>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto space-y-4">
+            <!-- FAQ Item 1 -->
+            <div class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition">
+                <button class="w-full text-left p-6 focus:outline-none hover:bg-gray-50 transition" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('fa-chevron-down'); this.querySelector('i').classList.toggle('fa-chevron-up');">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-bold text-dark text-lg">¿Cuentan con resolución sanitaria vigente?</h3>
+                        <i class="fas fa-chevron-down text-hazard text-xl"></i>
+                    </div>
+                </button>
+                <div class="hidden px-6 pb-6 bg-gray-50">
+                    <p class="text-gray-700 leading-relaxed">Sí, contamos con Resolución Sanitaria N° 2510389969 emitida por el Ministerio de Salud, vigente y al día. Estamos autorizados para el transporte de sustancias peligrosas (RESPEL) y residuos de establecimientos de atención de salud (REAS).</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition">
+                <button class="w-full text-left p-6 focus:outline-none hover:bg-gray-50 transition" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('fa-chevron-down'); this.querySelector('i').classList.toggle('fa-chevron-up');">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-bold text-dark text-lg">¿Qué capacidad de carga manejan?</h3>
+                        <i class="fas fa-chevron-down text-hazard text-xl"></i>
+                    </div>
+                </button>
+                <div class="hidden px-6 pb-6 bg-gray-50">
+                    <p class="text-gray-700 leading-relaxed">Nuestros vehículos tienen una capacidad de carga útil de 4.130 kg (4 toneladas), con carrocería de barandas abatibles y largo carrozable de 5,5 metros. Ideal para cargas voluminosas y sustancias peligrosas.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition">
+                <button class="w-full text-left p-6 focus:outline-none hover:bg-gray-50 transition" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('fa-chevron-down'); this.querySelector('i').classList.toggle('fa-chevron-up');">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-bold text-dark text-lg">¿Tienen cobertura de seguros?</h3>
+                        <i class="fas fa-chevron-down text-hazard text-xl"></i>
+                    </div>
+                </button>
+                <div class="hidden px-6 pb-6 bg-gray-50">
+                    <p class="text-gray-700 leading-relaxed">Sí, contamos con seguros de carga y accidentes vigentes con cobertura hasta UF 1.000. Todos nuestros servicios están respaldados por pólizas actualizadas, garantizando la protección de su mercancía.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition">
+                <button class="w-full text-left p-6 focus:outline-none hover:bg-gray-50 transition" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('fa-chevron-down'); this.querySelector('i').classList.toggle('fa-chevron-up');">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-bold text-dark text-lg">¿Están inscritos en SIDREP?</h3>
+                        <i class="fas fa-chevron-down text-hazard text-xl"></i>
+                    </div>
+                </button>
+                <div class="hidden px-6 pb-6 bg-gray-50">
+                    <p class="text-gray-700 leading-relaxed">Sí, estamos inscritos en la ventanilla única del sistema sectorial SIDREP (Sistema de Declaración y Seguimiento de Residuos Peligrosos). Además, ofrecemos asesoría en trámites y gestión documental para nuestros clientes.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition">
+                <button class="w-full text-left p-6 focus:outline-none hover:bg-gray-50 transition" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('fa-chevron-down'); this.querySelector('i').classList.toggle('fa-chevron-up');">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-bold text-dark text-lg">¿Qué cobertura geográfica tienen?</h3>
+                        <i class="fas fa-chevron-down text-hazard text-xl"></i>
+                    </div>
+                </button>
+                <div class="hidden px-6 pb-6 bg-gray-50">
+                    <p class="text-gray-700 leading-relaxed">Nuestra base de operaciones está en Puerto Montt, Región de Los Lagos, pero ofrecemos cobertura nacional a lo largo de todo Chile. Todos nuestros servicios incluyen monitoreo GPS 24/7 para seguimiento en tiempo real.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition">
+                <button class="w-full text-left p-6 focus:outline-none hover:bg-gray-50 transition" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('fa-chevron-down'); this.querySelector('i').classList.toggle('fa-chevron-up');">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-bold text-dark text-lg">¿Cuál es el tiempo de respuesta para cotizaciones?</h3>
+                        <i class="fas fa-chevron-down text-hazard text-xl"></i>
+                    </div>
+                </button>
+                <div class="hidden px-6 pb-6 bg-gray-50">
+                    <p class="text-gray-700 leading-relaxed">Respondemos cotizaciones en un plazo máximo de 24 horas. La disponibilidad de nuestros camiones es de 24 horas posterior a la confirmación del servicio. Para urgencias, puede contactarnos directamente al +56 9 42857502.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 7 - Additional -->
+            <div class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition">
+                <button class="w-full text-left p-6 focus:outline-none hover:bg-gray-50 transition" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('fa-chevron-down'); this.querySelector('i').classList.toggle('fa-chevron-up');">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-bold text-dark text-lg">¿Qué documentación necesito para contratar sus servicios?</h3>
+                        <i class="fas fa-chevron-down text-hazard text-xl"></i>
+                    </div>
+                </button>
+                <div class="hidden px-6 pb-6 bg-gray-50">
+                    <p class="text-gray-700 leading-relaxed">Para servicios de transporte RESPEL y REAS necesitará: declaración de residuos peligrosos, hojas de seguridad del material, ficha técnica, y documentación de la empresa generadora. Nuestro equipo puede asesorarlo en la preparación de toda la documentación necesaria.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 8 - Additional -->
+            <div class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition">
+                <button class="w-full text-left p-6 focus:outline-none hover:bg-gray-50 transition" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('fa-chevron-down'); this.querySelector('i').classList.toggle('fa-chevron-up');">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-bold text-dark text-lg">¿Ofrecen servicio de disposición final?</h3>
+                        <i class="fas fa-chevron-down text-hazard text-xl"></i>
+                    </div>
+                </button>
+                <div class="hidden px-6 pb-6 bg-gray-50">
+                    <p class="text-gray-700 leading-relaxed">Sí, contamos con convenios con plantas autorizadas para la disposición final de residuos peligrosos y REAS. Ofrecemos el servicio completo desde el retiro hasta la entrega de certificados de disposición final.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Still have questions Section -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="bg-white rounded-xl p-8 shadow-lg">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-6">
+                <i class="fas fa-comments text-3xl text-purple-600"></i>
+            </div>
+            <h2 class="text-3xl font-black text-dark mb-4">¿No encontraste tu respuesta?</h2>
+            <p class="text-gray-600 mb-8 text-lg">
+                Nuestro equipo está listo para resolver todas tus dudas personalmente
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/contacto" class="inline-block bg-hazard text-dark px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition shadow-xl">
+                    <i class="fas fa-envelope mr-2"></i>
+                    Enviar Consulta
+                </a>
+                <a href="https://wa.me/56942857502" target="_blank" class="inline-block bg-green-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-700 transition shadow-xl">
+                    <i class="fab fa-whatsapp mr-2"></i>
+                    WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Links Section -->
+<section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-black text-dark mb-2">Explora más</h2>
+            <p class="text-gray-600">Conoce más sobre nuestros servicios y capacidades</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="/servicios" class="group bg-gray-50 p-6 rounded-lg border-2 border-gray-200 hover:border-hazard hover:shadow-lg transition text-center">
+                <i class="fas fa-truck text-4xl text-hazard mb-4"></i>
+                <h3 class="font-bold text-lg mb-2">Nuestros Servicios</h3>
+                <p class="text-sm text-gray-600">Conoce todos nuestros servicios especializados</p>
+            </a>
+            <a href="/certificaciones" class="group bg-gray-50 p-6 rounded-lg border-2 border-gray-200 hover:border-hazard hover:shadow-lg transition text-center">
+                <i class="fas fa-certificate text-4xl text-hazard mb-4"></i>
+                <h3 class="font-bold text-lg mb-2">Certificaciones</h3>
+                <p class="text-sm text-gray-600">Revisa nuestras certificaciones oficiales</p>
+            </a>
+            <a href="/flota" class="group bg-gray-50 p-6 rounded-lg border-2 border-gray-200 hover:border-hazard hover:shadow-lg transition text-center">
+                <i class="fas fa-truck-loading text-4xl text-hazard mb-4"></i>
+                <h3 class="font-bold text-lg mb-2">Nuestra Flota</h3>
+                <p class="text-sm text-gray-600">Especificaciones de nuestros vehículos</p>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

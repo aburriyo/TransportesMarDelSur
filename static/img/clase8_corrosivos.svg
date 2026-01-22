@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Split diamond background (Clase 8 - Corrosivos) -->
+  <g transform="translate(100, 100) rotate(45)">
+    <!-- White top half -->
+    <path d="M -70 0 L 0 -70 L 70 0 Z" fill="white" stroke="black" stroke-width="3"/>
+    <!-- Black bottom half -->
+    <path d="M -70 0 L 0 70 L 70 0 Z" fill="black" stroke="black" stroke-width="3"/>
+    <!-- Inner border -->
+    <rect x="-65" y="-65" width="130" height="130" fill="none" stroke="black" stroke-width="1"/>
+  </g>
+
+  <!-- Corrosive symbols -->
+  <!-- Test tube pouring on hand -->
+  <g transform="translate(85, 70)">
+    <!-- Test tube -->
+    <rect x="-3" y="-15" width="6" height="15" fill="black"/>
+    <path d="M -3 -15 Q 0 -18 3 -15" fill="black"/>
+
+    <!-- Liquid drops -->
+    <circle cx="0" cy="2" r="1.5" fill="black"/>
+    <circle cx="2" cy="6" r="1.5" fill="black"/>
+
+    <!-- Hand -->
+    <ellipse cx="0" cy="15" rx="6" ry="4" fill="black"/>
+    <rect x="-6" y="13" width="12" height="8" fill="black"/>
+
+    <!-- Corrosion marks -->
+    <path d="M -4 18 L -2 22 M 0 18 L 0 22 M 4 18 L 2 22" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Test tube pouring on material -->
+  <g transform="translate(115, 70)">
+    <!-- Test tube -->
+    <rect x="-3" y="-15" width="6" height="15" fill="black"/>
+    <path d="M -3 -15 Q 0 -18 3 -15" fill="black"/>
+
+    <!-- Liquid drops -->
+    <circle cx="0" cy="2" r="1.5" fill="black"/>
+    <circle cx="-2" cy="6" r="1.5" fill="black"/>
+
+    <!-- Material block -->
+    <rect x="-7" y="12" width="14" height="10" fill="black" stroke="black" stroke-width="1"/>
+
+    <!-- Corrosion hole -->
+    <ellipse cx="0" cy="17" rx="4" ry="3" fill="white"/>
+    <path d="M -3 15 L -4 13 M 3 15 L 4 13" stroke="white" stroke-width="1" stroke-linecap="round"/>
+  </g>
+
+  <!-- Text -->
+  <text x="100" y="142" font-family="Arial Black, sans-serif" font-size="11" font-weight="bold"
+        fill="black" text-anchor="middle">CORROSIVO</text>
+
+  <!-- Class number -->
+  <g transform="translate(100, 168)">
+    <rect x="-12" y="-12" width="24" height="20" fill="white" stroke="black" stroke-width="1.5"/>
+    <text x="0" y="4" font-family="Arial Black, sans-serif" font-size="16" font-weight="bold"
+          fill="black" text-anchor="middle">8</text>
+  </g>
+</svg>
