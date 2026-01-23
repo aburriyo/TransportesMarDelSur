@@ -3,13 +3,13 @@ import os
 
 app = Flask(__name__)
 
-# Force HTTPS in production
-@app.before_request
-def force_https():
-    if not app.debug:
-        if request.headers.get('X-Forwarded-Proto', 'http') == 'http':
-            url = request.url.replace('http://', 'https://', 1)
-            return redirect(url, code=301)
+# Force HTTPS in production (disabled temporarily until SSL is configured)
+# @app.before_request
+# def force_https():
+#     if not app.debug:
+#         if request.headers.get('X-Forwarded-Proto', 'http') == 'http':
+#             url = request.url.replace('http://', 'https://', 1)
+#             return redirect(url, code=301)
 
 # Custom error handlers
 @app.errorhandler(404)
