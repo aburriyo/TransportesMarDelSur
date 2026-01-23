@@ -2,11 +2,14 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         <!-- Logo Area -->
         <a href="/" class="flex items-center">
-            <!-- Logo Original PNG -->
-            <img src="{{ url_for('static', filename='img/logo.png') }}"
-                 alt="Transportes Mar del Sur - Logo"
-                 class="h-14 w-auto sm:h-16"
-                 style="max-width: 200px;">
+            <picture>
+                <source srcset="{{ url_for('static', filename='img/logo.webp') }}" type="image/webp">
+                <img src="{{ url_for('static', filename='img/logo.png') }}"
+                     alt="Transportes Mar del Sur - Logo"
+                     width="200" height="64"
+                     class="h-14 w-auto sm:h-16"
+                     style="max-width: 200px;">
+            </picture>
         </a>
 
         <!-- Desktop Navigation -->

@@ -8,11 +8,14 @@
 <section class="relative text-white py-20 md:py-32 overflow-hidden">
     <!-- Background Image with Animation -->
     <div class="absolute inset-0 z-0">
-        <img src="{{ url_for('static', filename='img/hero_truck.jpg') }}"
-             alt="Transporte de Sustancias Peligrosas"
-             width="1200" height="800"
-             fetchpriority="high"
-             class="hero-bg-image w-full h-full object-cover object-center">
+        <picture>
+            <source srcset="{{ url_for('static', filename='img/hero_truck.webp') }}" type="image/webp">
+            <img src="{{ url_for('static', filename='img/hero_truck.jpg') }}"
+                 alt="Transporte de Sustancias Peligrosas"
+                 width="1200" height="800"
+                 fetchpriority="high"
+                 class="hero-bg-image w-full h-full object-cover object-center">
+        </picture>
         <!-- Dark Overlay for text readability -->
         <div class="absolute inset-0 bg-gradient-to-br from-black/80 via-gray-900/75 to-black/85"></div>
         <!-- Hazard Yellow Accent Overlay -->
@@ -34,12 +37,15 @@
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 hero-content">
         <div class="mb-8">
-            <img src="{{ url_for('static', filename='img/logo.png') }}"
-                 alt="Transportes Mar del Sur Logo"
-                 width="400" height="128"
-                 fetchpriority="high"
-                 class="h-32 w-auto mx-auto drop-shadow-2xl filter brightness-110"
-                 style="filter: drop-shadow(0 10px 30px rgba(255, 214, 0, 0.3)) brightness(1.1);">
+            <picture>
+                <source srcset="{{ url_for('static', filename='img/logo.webp') }}" type="image/webp">
+                <img src="{{ url_for('static', filename='img/logo.png') }}"
+                     alt="Transportes Mar del Sur Logo"
+                     width="400" height="128"
+                     fetchpriority="high"
+                     class="h-32 w-auto mx-auto drop-shadow-2xl filter brightness-110"
+                     style="filter: drop-shadow(0 10px 30px rgba(255, 214, 0, 0.3)) brightness(1.1);">
+            </picture>
         </div>
         <h1 class="text-5xl md:text-6xl font-black mb-6 leading-tight" style="text-shadow: 0 0 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.6);">
             Transportes <span class="text-hazard" style="text-shadow: 0 0 30px rgba(255, 214, 0, 0.5), 0 0 60px rgba(255, 214, 0, 0.3);">Mar del Sur</span>

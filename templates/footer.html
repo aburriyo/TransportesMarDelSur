@@ -3,12 +3,15 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
             <div class="col-span-1 md:col-span-2">
                 <div class="mb-6">
-                    <img src="{{ url_for('static', filename='img/logo.png') }}"
-                         alt="Transportes Mar del Sur"
-                         width="250" height="80"
-                         loading="lazy"
-                         class="h-20 w-auto"
-                         style="filter: brightness(1.1);">
+                    <picture>
+                        <source srcset="{{ url_for('static', filename='img/logo.webp') }}" type="image/webp">
+                        <img src="{{ url_for('static', filename='img/logo.png') }}"
+                             alt="Transportes Mar del Sur"
+                             width="250" height="80"
+                             loading="lazy"
+                             class="h-20 w-auto"
+                             style="filter: brightness(1.1);">
+                    </picture>
                 </div>
                 <p class="text-sm leading-relaxed mb-4 max-w-sm">
                     Especialistas en transporte de sustancias peligrosas (RESPEL) y residuos de establecimientos de salud (REAS). Cumplimiento normativo garantizado.
