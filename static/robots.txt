@@ -1,4 +1,4 @@
-# robots.txt para Transporte Mar del Sur
+# robots.txt para Transportes Mar del Sur
 # Optimizado para SEO y rastreo de motores de búsqueda
 
 User-agent: *
@@ -33,4 +33,4 @@ Allow: /
 Crawl-delay: 1
 
 # Sitemap
-Sitemap: https://www.transportemardelsur.cl/sitemap.xml
+Sitemap: https://www.transportesmardelsur.cl/sitemap.xml

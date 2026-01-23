@@ -4,12 +4,12 @@
 
   <!-- Página Principal -->
   <url>
-    <loc>https://www.transportemardelsur.cl/</loc>
+    <loc>https://www.transportesmardelsur.cl/</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://www.transportemardelsur.cl/static/img/logo.png</image:loc>
+      <image:loc>https://www.transportesmardelsur.cl/static/img/logo.png</image:loc>
       <image:title>Logo Transporte Mar del Sur</image:title>
       <image:caption>Transporte especializado RESPEL y REAS con resolución sanitaria</image:caption>
     </image:image>
@@ -17,7 +17,7 @@
 
   <!-- Página Servicios -->
   <url>
-    <loc>https://www.transportemardelsur.cl/servicios</loc>
+    <loc>https://www.transportesmardelsur.cl/servicios</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -25,7 +25,7 @@
 
   <!-- Página Certificaciones -->
   <url>
-    <loc>https://www.transportemardelsur.cl/certificaciones</loc>
+    <loc>https://www.transportesmardelsur.cl/certificaciones</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -33,7 +33,7 @@
 
   <!-- Página Flota -->
   <url>
-    <loc>https://www.transportemardelsur.cl/flota</loc>
+    <loc>https://www.transportesmardelsur.cl/flota</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -41,7 +41,7 @@
 
   <!-- Página FAQ -->
   <url>
-    <loc>https://www.transportemardelsur.cl/faq</loc>
+    <loc>https://www.transportesmardelsur.cl/faq</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -49,7 +49,7 @@
 
   <!-- Página Contacto -->
   <url>
-    <loc>https://www.transportemardelsur.cl/contacto</loc>
+    <loc>https://www.transportesmardelsur.cl/contacto</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -57,7 +57,7 @@
 
   <!-- Página Nosotros -->
   <url>
-    <loc>https://www.transportemardelsur.cl/nosotros</loc>
+    <loc>https://www.transportesmardelsur.cl/nosotros</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
