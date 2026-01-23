@@ -156,26 +156,11 @@
     </script>
 
     <!-- Preconnect to external resources for faster loading -->
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
-    <!-- Tailwind CSS - Critical for layout -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        hazard: '#FFD600', // Warning Yellow
-                        dark: '#2D2D2D',
-                        light: '#F5F5F5'
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- Tailwind CSS - Compiled locally for performance -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tailwind.css') }}">
 
     <!-- Font Awesome - Async loading with font-display fix -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
