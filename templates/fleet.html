@@ -15,6 +15,114 @@
     </div>
 </section>
 
+<!-- Galería de Fotos -->
+<section class="py-16 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-black text-dark mb-2">Mitsubishi Fuso Canter</h2>
+            <p class="text-gray-600">Nuestro camión en acción - Cobertura desde Puerto Montt a todo Chile</p>
+        </div>
+
+        <!-- Galería Principal -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Imagen Principal (más grande) -->
+            <div class="md:col-span-2 lg:col-span-2 relative group overflow-hidden rounded-xl shadow-lg">
+                <picture>
+                    <source srcset="{{ url_for('static', filename='img/flota-fuso-lateral.webp') }}" type="image/webp">
+                    <img src="{{ url_for('static', filename='img/flota-fuso-lateral.jpg') }}"
+                         alt="Camión Mitsubishi Fuso - Vista Lateral"
+                         class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                         loading="lazy" width="800" height="600">
+                </picture>
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                    <span class="bg-hazard text-dark px-3 py-1 rounded-full text-sm font-bold">Mitsubishi Fuso</span>
+                    <p class="text-white mt-2 font-semibold">Capacidad: 4 toneladas | Carrocería con barandas abatibles</p>
+                </div>
+            </div>
+
+            <!-- Imagen Zona Industrial -->
+            <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                <picture>
+                    <source srcset="{{ url_for('static', filename='img/flota-fuso-industrial.webp') }}" type="image/webp">
+                    <img src="{{ url_for('static', filename='img/flota-fuso-industrial.jpg') }}"
+                         alt="Camión en zona industrial"
+                         class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                         loading="lazy" width="800" height="600">
+                </picture>
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                    <p class="text-white text-sm font-semibold">Servicio en zonas industriales</p>
+                </div>
+            </div>
+
+            <!-- Imagen Patagonia -->
+            <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                <picture>
+                    <source srcset="{{ url_for('static', filename='img/flota-fuso-patagonia.webp') }}" type="image/webp">
+                    <img src="{{ url_for('static', filename='img/flota-fuso-patagonia.jpg') }}"
+                         alt="Camión en Patagonia chilena"
+                         class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                         loading="lazy" width="800" height="600">
+                </picture>
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                    <p class="text-white text-sm font-semibold">Cobertura Patagonia</p>
+                </div>
+            </div>
+
+            <!-- Imagen Carga Maquinaria -->
+            <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                <picture>
+                    <source srcset="{{ url_for('static', filename='img/flota-fuso-maquinaria2.webp') }}" type="image/webp">
+                    <img src="{{ url_for('static', filename='img/flota-fuso-maquinaria2.jpg') }}"
+                         alt="Transporte de maquinaria"
+                         class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                         loading="lazy" width="800" height="600">
+                </picture>
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                    <p class="text-white text-sm font-semibold">Transporte de maquinaria</p>
+                </div>
+            </div>
+
+            <!-- Imagen Ferry/Barcaza -->
+            <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                <picture>
+                    <source srcset="{{ url_for('static', filename='img/flota-fuso-barcaza.webp') }}" type="image/webp">
+                    <img src="{{ url_for('static', filename='img/flota-fuso-barcaza.jpg') }}"
+                         alt="Camión en barcaza - Carretera Austral"
+                         class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                         loading="lazy" width="800" height="600">
+                </picture>
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                    <p class="text-white text-sm font-semibold">Servicio Carretera Austral</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Características destacadas -->
+        <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            <div class="bg-white p-4 rounded-lg shadow">
+                <i class="fas fa-truck text-hazard text-2xl mb-2" aria-hidden="true"></i>
+                <p class="font-bold text-dark">4 Toneladas</p>
+                <p class="text-sm text-gray-600">Capacidad de carga</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow">
+                <i class="fas fa-ruler-combined text-hazard text-2xl mb-2" aria-hidden="true"></i>
+                <p class="font-bold text-dark">5.5 metros</p>
+                <p class="text-sm text-gray-600">Largo carrozable</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow">
+                <i class="fas fa-satellite-dish text-hazard text-2xl mb-2" aria-hidden="true"></i>
+                <p class="font-bold text-dark">GPS 24/7</p>
+                <p class="text-sm text-gray-600">Monitoreo constante</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow">
+                <i class="fas fa-shield-alt text-hazard text-2xl mb-2" aria-hidden="true"></i>
+                <p class="font-bold text-dark">Seguro UF 1.000</p>
+                <p class="text-sm text-gray-600">Cobertura completa</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Vehicle Specs Section -->
 <section class="py-20 bg-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
