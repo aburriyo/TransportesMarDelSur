@@ -3,21 +3,22 @@
 
 User-agent: *
 Allow: /
+Allow: /servicios
+Allow: /certificaciones
+Allow: /flota
+Allow: /faq
+Allow: /contacto
+Allow: /nosotros
 Allow: /static/
-Allow: /static/css/
-Allow: /static/js/
-Allow: /static/img/
 
 # Archivos específicos permitidos
 Allow: /sitemap.xml
 Allow: /robots.txt
 
 # Evitar rastreo de archivos temporales o de sistema
-Disallow: /*.json$
-Disallow: /*.xml$
 Disallow: /tmp/
 Disallow: /__pycache__/
-Disallow: /*.pyc$
+Disallow: /index
 
 # Configuración para bots específicos
 User-agent: Googlebot

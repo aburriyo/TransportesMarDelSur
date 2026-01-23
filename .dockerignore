@@ -46,7 +46,13 @@ nginx/
 
 # Documentation
 *.md
-CLAUDE.md
 
 # Plans
 .claude/
+
+# PDFs and misc files
+*.pdf
+
+# Scripts (not needed in container)
+deploy.sh
+ssl-setup.sh

@@ -102,16 +102,31 @@
 
             <!-- Right Column: Contact Form -->
             <div class="lg:w-6/12 w-full bg-gray-50 rounded-xl p-8 shadow-lg border-2 border-gray-200">
+                <!-- Success Message (shown after form submission) -->
+                <div id="success-message" class="hidden bg-green-100 border-2 border-green-500 text-green-800 px-6 py-4 rounded-lg mb-6">
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-2xl text-green-600 mr-3"></i>
+                        <div>
+                            <h4 class="font-bold text-lg">¡Mensaje Enviado!</h4>
+                            <p class="text-sm">Gracias por contactarnos. Te responderemos en menos de 24 horas.</p>
+                        </div>
+                    </div>
+                </div>
+
                 <h3 class="text-2xl font-black text-dark mb-2">Solicitar Cotización</h3>
                 <p class="text-gray-600 mb-6">Completa el formulario y te contactaremos pronto</p>
-                <form>
+                <form action="https://formspree.io/f/xykewvwr" method="POST">
+                    <!-- Hidden field for form identification -->
+                    <input type="hidden" name="_subject" value="Nueva Solicitud de Cotización - Mar del Sur">
+                    <input type="hidden" name="_next" value="https://www.transportemardelsur.cl/contacto?enviado=true">
+
                     <div class="mb-4">
                         <label class="block text-gray-700 text-sm font-bold mb-2 uppercase" for="name">
                             Nombre Contacto *
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:border-hazard focus:ring-2 focus:ring-hazard/20"
-                            id="name" type="text" placeholder="Nombre y apellido" required>
+                            id="name" name="nombre" type="text" placeholder="Nombre y apellido" required>
                     </div>
 
                     <div class="mb-4">
@@ -120,7 +135,7 @@
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:border-hazard focus:ring-2 focus:ring-hazard/20"
-                            id="company" type="text" placeholder="Razón social" required>
+                            id="company" name="empresa" type="text" placeholder="Razón social" required>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
@@ -130,7 +145,7 @@
                             </label>
                             <input
                                 class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:border-hazard focus:ring-2 focus:ring-hazard/20"
-                                id="phone" type="tel" placeholder="+56 9 XXXX XXXX" required>
+                                id="phone" name="telefono" type="tel" placeholder="+56 9 XXXX XXXX" required>
                         </div>
                         <div>
                             <label class="block text-gray-700 text-sm font-bold mb-2 uppercase" for="email">
@@ -138,7 +153,7 @@
                             </label>
                             <input
                                 class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:border-hazard focus:ring-2 focus:ring-hazard/20"
-                                id="email" type="email" placeholder="email@empresa.cl" required>
+                                id="email" name="email" type="email" placeholder="email@empresa.cl" required>
                         </div>
                     </div>
 
@@ -148,14 +163,14 @@
                         </label>
                         <select
                             class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:border-hazard focus:ring-2 focus:ring-hazard/20"
-                            id="service" required>
+                            id="service" name="servicio" required>
                             <option value="">Seleccione un servicio</option>
-                            <option value="respel">Transporte RESPEL (Sustancias Peligrosas)</option>
-                            <option value="reas">Transporte REAS (Residuos Salud)</option>
-                            <option value="general">Carga General</option>
-                            <option value="almacenaje">Almacenaje y Bodega</option>
-                            <option value="gestion">Gestión Documental SIDREP</option>
-                            <option value="otro">Otro</option>
+                            <option value="Transporte RESPEL">Transporte RESPEL (Sustancias Peligrosas)</option>
+                            <option value="Transporte REAS">Transporte REAS (Residuos Salud)</option>
+                            <option value="Carga General">Carga General</option>
+                            <option value="Almacenaje y Bodega">Almacenaje y Bodega</option>
+                            <option value="Gestión Documental SIDREP">Gestión Documental SIDREP</option>
+                            <option value="Otro">Otro</option>
                         </select>
                     </div>
 
@@ -166,7 +181,7 @@
                             </label>
                             <input
                                 class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:border-hazard focus:ring-2 focus:ring-hazard/20"
-                                id="origin" type="text" placeholder="Ciudad origen">
+                                id="origin" name="origen" type="text" placeholder="Ciudad origen">
                         </div>
                         <div>
                             <label class="block text-gray-700 text-sm font-bold mb-2 uppercase" for="destination">
@@ -174,7 +189,7 @@
                             </label>
                             <input
                                 class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:border-hazard focus:ring-2 focus:ring-hazard/20"
-                                id="destination" type="text" placeholder="Ciudad destino">
+                                id="destination" name="destino" type="text" placeholder="Ciudad destino">
                         </div>
                     </div>
 
@@ -184,12 +199,12 @@
                         </label>
                         <textarea
                             class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:border-hazard focus:ring-2 focus:ring-hazard/20"
-                            id="message" rows="4" placeholder="Peso estimado, tipo de residuo, frecuencia, documentación disponible, etc."></textarea>
+                            id="message" name="mensaje" rows="4" placeholder="Peso estimado, tipo de residuo, frecuencia, documentación disponible, etc."></textarea>
                     </div>
 
                     <button
                         class="bg-hazard w-full hover:bg-yellow-400 text-dark font-bold py-4 px-4 rounded-lg focus:outline-none focus:shadow-outline transition transform hover:scale-[1.01] shadow-lg"
-                        type="button">
+                        type="submit">
                         <i class="fas fa-paper-plane mr-2"></i> ENVIAR SOLICITUD
                     </button>
                     <p class="text-xs text-gray-500 mt-3 text-center">
@@ -222,4 +237,16 @@
         </div>
     </div>
 </section>
+
+<!-- Script to show success message -->
+<script>
+    // Check if form was submitted successfully
+    if (window.location.search.includes('enviado=true')) {
+        document.getElementById('success-message').classList.remove('hidden');
+        // Scroll to success message
+        document.getElementById('success-message').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // Clean URL without reloading
+        window.history.replaceState({}, document.title, window.location.pathname);
+    }
+</script>
 {% endblock %}

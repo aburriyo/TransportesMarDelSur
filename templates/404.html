@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Página No Encontrada | Mar del Sur{% endblock %}
+{% block description %}La página que buscas no existe o ha sido movida.{% endblock %}
+
+{% block content %}
+<section class="min-h-[70vh] flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200 py-20">
+    <div class="max-w-2xl mx-auto px-4 text-center">
+        <!-- 404 Number -->
+        <div class="mb-8">
+            <span class="text-9xl md:text-[12rem] font-black text-hazard" style="text-shadow: 4px 4px 0 #2D2D2D;">
+                404
+            </span>
+        </div>
+
+        <!-- Icon -->
+        <div class="mb-8">
+            <div class="inline-flex items-center justify-center w-24 h-24 bg-hazard/20 rounded-full">
+                <i class="fas fa-truck text-5xl text-hazard animate-bounce"></i>
+            </div>
+        </div>
+
+        <!-- Message -->
+        <h1 class="text-3xl md:text-4xl font-black text-dark mb-4">
+            ¡Ups! Página no encontrada
+        </h1>
+        <p class="text-lg text-gray-600 mb-8 max-w-md mx-auto">
+            Parece que este camión tomó una ruta equivocada. La página que buscas no existe o ha sido movida.
+        </p>
+
+        <!-- Actions -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/" class="inline-block bg-hazard text-dark px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition shadow-xl">
+                <i class="fas fa-home mr-2"></i>
+                Volver al Inicio
+            </a>
+            <a href="/contacto" class="inline-block bg-dark text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-800 transition shadow-xl">
+                <i class="fas fa-envelope mr-2"></i>
+                Contactar
+            </a>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="mt-12 pt-8 border-t border-gray-300">
+            <p class="text-sm text-gray-500 mb-4">O visita alguna de estas secciones:</p>
+            <div class="flex flex-wrap justify-center gap-4 text-sm">
+                <a href="/servicios" class="text-hazard hover:underline font-semibold">Servicios</a>
+                <span class="text-gray-300">|</span>
+                <a href="/certificaciones" class="text-hazard hover:underline font-semibold">Certificaciones</a>
+                <span class="text-gray-300">|</span>
+                <a href="/flota" class="text-hazard hover:underline font-semibold">Flota</a>
+                <span class="text-gray-300">|</span>
+                <a href="/faq" class="text-hazard hover:underline font-semibold">FAQ</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

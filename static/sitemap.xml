@@ -5,7 +5,7 @@
   <!-- Página Principal -->
   <url>
     <loc>https://www.transportemardelsur.cl/</loc>
-    <lastmod>2026-01-20</lastmod>
+    <lastmod>2026-01-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -15,36 +15,52 @@
     </image:image>
   </url>
 
-  <!-- Sección Servicios -->
+  <!-- Página Servicios -->
   <url>
-    <loc>https://www.transportemardelsur.cl/#servicios</loc>
-    <lastmod>2026-01-20</lastmod>
+    <loc>https://www.transportemardelsur.cl/servicios</loc>
+    <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Sección Certificaciones -->
+  <!-- Página Certificaciones -->
   <url>
-    <loc>https://www.transportemardelsur.cl/#certificaciones</loc>
-    <lastmod>2026-01-20</lastmod>
+    <loc>https://www.transportemardelsur.cl/certificaciones</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Página Flota -->
+  <url>
+    <loc>https://www.transportemardelsur.cl/flota</loc>
+    <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Sección Características -->
+  <!-- Página FAQ -->
   <url>
-    <loc>https://www.transportemardelsur.cl/#caracteristicas</loc>
-    <lastmod>2026-01-20</lastmod>
+    <loc>https://www.transportemardelsur.cl/faq</loc>
+    <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Sección Contacto -->
+  <!-- Página Contacto -->
   <url>
-    <loc>https://www.transportemardelsur.cl/#contacto</loc>
-    <lastmod>2026-01-20</lastmod>
+    <loc>https://www.transportemardelsur.cl/contacto</loc>
+    <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Página Nosotros -->
+  <url>
+    <loc>https://www.transportemardelsur.cl/nosotros</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
 </urlset>
