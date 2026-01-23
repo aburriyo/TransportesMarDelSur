@@ -177,12 +177,44 @@
         }
     </script>
 
-    <!-- Font Awesome - Deferred loading -->
+    <!-- Font Awesome - Async loading with font-display fix -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"></noscript>
+    <style>
+        @font-face {
+            font-family: 'Font Awesome 6 Free';
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Font Awesome 6 Brands';
+            font-display: swap;
+        }
+    </style>
 
-    <!-- Quick Contact Button Styles -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact-button.css') }}">
+    <!-- Quick Contact Button Styles - Inlined for performance -->
+    <style>
+        .quick-contact-fab{position:fixed;bottom:30px;right:30px;z-index:1000;display:flex;flex-direction:column;gap:12px;animation:slideInUp .5s ease-out}
+        .contact-btn{width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,.3);transition:all .3s ease;position:relative}
+        .contact-btn:hover{transform:scale(1.1);box-shadow:0 6px 20px rgba(0,0,0,.4)}
+        .contact-btn:active{transform:scale(.95)}
+        .contact-btn i{font-size:28px}
+        .contact-btn.whatsapp{background:linear-gradient(135deg,#25D366 0%,#128C7E 100%);animation:pulse 2s infinite}
+        .contact-btn.whatsapp:hover{background:linear-gradient(135deg,#128C7E 0%,#075E54 100%)}
+        .contact-btn.phone{background:linear-gradient(135deg,#FFD600 0%,#FFA500 100%);color:#1a1a1a}
+        .contact-btn.phone:hover{background:linear-gradient(135deg,#FFA500 0%,#FF8C00 100%)}
+        .contact-btn::before{content:attr(data-tooltip);position:absolute;right:70px;background:rgba(0,0,0,.85);color:#fff;padding:8px 16px;border-radius:6px;white-space:nowrap;font-size:14px;font-weight:500;opacity:0;pointer-events:none;transition:opacity .3s ease;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+        .contact-btn:hover::before{opacity:1}
+        .contact-btn::after{content:'';position:absolute;right:60px;border:6px solid transparent;border-left-color:rgba(0,0,0,.85);opacity:0;pointer-events:none;transition:opacity .3s ease}
+        .contact-btn:hover::after{opacity:1}
+        .contact-btn:focus{outline:3px solid #FFD600;outline-offset:2px}
+        .contact-btn:focus:not(:focus-visible){outline:none}
+        @keyframes slideInUp{from{transform:translateY(100px);opacity:0}to{transform:translateY(0);opacity:1}}
+        @keyframes pulse{0%,100%{box-shadow:0 4px 12px rgba(0,0,0,.3)}50%{box-shadow:0 4px 20px rgba(37,211,102,.6)}}
+        @media(max-width:768px){.quick-contact-fab{bottom:20px;right:20px;gap:10px}.contact-btn{width:56px;height:56px}.contact-btn i{font-size:24px}.contact-btn::before,.contact-btn::after{display:none}}
+        @media(max-width:480px){.quick-contact-fab{bottom:15px;right:15px}.contact-btn{width:50px;height:50px}.contact-btn i{font-size:22px}}
+        @media print{.quick-contact-fab{display:none}}
+    </style>
 
     <style>
         .hazard-stripe {
@@ -343,8 +375,8 @@
 
     {% include 'footer.html' ignore missing %}
 
-    <!-- Carousel JavaScript -->
-    <script src="{{ url_for('static', filename='js/carousel.js') }}"></script>
+    <!-- Carousel JavaScript - Deferred -->
+    <script src="{{ url_for('static', filename='js/carousel.js') }}" defer></script>
 </body>
 
 </html>
