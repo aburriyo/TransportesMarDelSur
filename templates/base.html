@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="overflow-x-hidden">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
 
     <!-- SEO Meta Tags -->
     <title>{% block title %}Transporte RESPEL y REAS Puerto Montt | Resolución Sanitaria 2510389969 | Mar del Sur{% endblock %}</title>
-    <meta name="description" content="{% block description %}Transporte especializado de sustancias peligrosas (RESPEL) y residuos hospitalarios (REAS) en Chile. Resolución Sanitaria vigente N° 2510389969, inscripción SIDREP, GPS 24/7, seguros UF 1.000. Cobertura nacional desde Puerto Montt.{% endblock %}">
+    <meta name="description" content="{% block description %}Transporte especializado de sustancias peligrosas (RESPEL) y residuos hospitalarios (REAS) en Chile. Resolución Sanitaria vigente N° 2510389969, inscripción SIDREP, GPS 24/7. Cobertura nacional desde Puerto Montt.{% endblock %}">
     <meta name="keywords" content="transporte respel, transporte reas, sustancias peligrosas chile, residuos peligrosos puerto montt, resolución sanitaria, sidrep, transporte residuos hospitalarios, logística respel, transporte materiales peligrosos, ds 298, transporte carga peligrosa chile, transporte residuos salud">
     <meta name="author" content="Transportes Mar del Sur SPA">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -62,10 +62,11 @@
       "description": "Empresa especializada en transporte de sustancias peligrosas (RESPEL) y residuos de establecimientos de salud (REAS) con Resolución Sanitaria vigente y cobertura nacional.",
       "telephone": "+56942857502",
       "email": "Transportesmardelsur@gmail.com",
-      "foundingDate": "2020",
+      "foundingDate": "2023-08",
       "taxID": "77.779.818-9",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "Francisco Sepúlveda Gutiérrez 6180",
         "addressLocality": "Puerto Montt",
         "addressRegion": "Región de Los Lagos",
         "addressCountry": "CL"
@@ -334,12 +335,12 @@
     </style>
 </head>
 
-<body class="bg-white text-dark flex flex-col min-h-screen font-sans">
+<body class="bg-white text-dark flex flex-col min-h-screen font-sans overflow-x-hidden" style="overflow-wrap: break-word; word-wrap: break-word;">
     <div class="h-2 hazard-stripe w-full"></div>
 
     {% include 'navbar.html' ignore missing %}
 
-    <main class="flex-grow">
+    <main class="flex-grow overflow-x-hidden">
         {% block content %}{% endblock %}
     </main>
 

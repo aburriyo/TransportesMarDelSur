@@ -218,8 +218,7 @@ const certificationData = {
             'Capacidad: 4 toneladas',
             'Patente: SRJK-43'
         ],
-        icon: 'fa-shield-check',
-        color: 'green'
+        image: '/static/img/certificado_ds298.svg'
     },
     'sidrep': {
         title: 'SIDREP',
@@ -232,8 +231,7 @@ const certificationData = {
             'Estado: Vigente',
             'Alcance: Nacional'
         ],
-        icon: 'fa-file-circle-check',
-        color: 'blue'
+        image: '/static/img/sidrep_certificado.svg'
     },
     'resolucion': {
         title: 'Resolución Sanitaria',
@@ -246,8 +244,7 @@ const certificationData = {
             'Estado: Vigente',
             'Alcance: Sustancias peligrosas y REAS'
         ],
-        icon: 'fa-certificate',
-        color: 'teal'
+        image: '/static/img/resolucion_sanitaria.svg'
     },
     'clase1': {
         title: 'Clase 1 - Explosivos',
@@ -260,8 +257,7 @@ const certificationData = {
             'Divisiones: 1.1, 1.2, 1.3, 1.4, 1.5, 1.6',
             'Riesgo: Explosión y proyección'
         ],
-        icon: 'fa-explosion',
-        color: 'orange'
+        image: '/static/img/clase1_explosivos.svg'
     },
     'clase2': {
         title: 'Clase 2 - Gases',
@@ -274,8 +270,7 @@ const certificationData = {
             'Divisiones: 2.1 Inflamables, 2.2 No inflamables, 2.3 Tóxicos',
             'Riesgo: Inflamabilidad, presión, toxicidad'
         ],
-        icon: 'fa-fire-flame-curved',
-        color: 'red'
+        image: '/static/img/clase2_gases.svg'
     },
     'clase3': {
         title: 'Clase 3 - Líquidos Inflamables',
@@ -288,8 +283,7 @@ const certificationData = {
             'Ejemplos: Gasolina, alcohol, solventes',
             'Riesgo: Incendio y explosión'
         ],
-        icon: 'fa-fire',
-        color: 'red'
+        image: '/static/img/clase3_liquidos.svg'
     },
     'clase6': {
         title: 'Clase 6 - Tóxicos',
@@ -302,8 +296,21 @@ const certificationData = {
             'Divisiones: 6.1 Tóxicos, 6.2 Infecciosos',
             'Riesgo: Envenenamiento, infección'
         ],
-        icon: 'fa-skull-crossbones',
-        color: 'gray'
+        image: '/static/img/clase6_toxicos.svg'
+    },
+    'clase6_infeccioso': {
+        title: 'Clase 6.2 - Infeccioso',
+        subtitle: 'NCh 2190',
+        description: 'Pictograma para identificación de sustancias infecciosas según norma chilena NCh 2190. Incluye residuos hospitalarios (REAS) y materiales biológicos peligrosos.',
+        details: [
+            'Clase: 6.2 - Sustancias Infecciosas',
+            'Color: Blanco',
+            'Norma: NCh 2190.Of2003',
+            'Símbolo: Riesgo biológico (Biohazard)',
+            'Ejemplos: Residuos hospitalarios, muestras clínicas',
+            'Riesgo: Infección por microorganismos patógenos'
+        ],
+        image: '/static/img/clase6_infeccioso.svg'
     },
     'clase8': {
         title: 'Clase 8 - Corrosivos',
@@ -316,8 +323,7 @@ const certificationData = {
             'Ejemplos: Ácidos, bases, baterías',
             'Riesgo: Quemaduras químicas'
         ],
-        icon: 'fa-flask',
-        color: 'gray'
+        image: '/static/img/clase8_corrosivos.svg'
     },
     'clase9': {
         title: 'Clase 9 - Varios',
@@ -330,56 +336,82 @@ const certificationData = {
             'Ejemplos: Baterías de litio, materiales magnetizados',
             'Riesgo: Diversos'
         ],
-        icon: 'fa-triangle-exclamation',
-        color: 'gray'
+        image: '/static/img/clase9_varios.svg'
     }
 };
 
 function openModal(certId) {
     const data = certificationData[certId];
-    if (!data) return;
+    if (!data) {
+        console.warn('No data found for:', certId);
+        return;
+    }
 
     const modal = document.getElementById('cert-modal');
     const modalTitle = document.getElementById('modal-title');
     const modalSubtitle = document.getElementById('modal-subtitle');
     const modalDescription = document.getElementById('modal-description');
     const modalDetails = document.getElementById('modal-details');
-    const modalIcon = document.getElementById('modal-icon');
+    const modalImage = document.getElementById('modal-image');
 
-    modalTitle.textContent = data.title;
-    modalSubtitle.textContent = data.subtitle;
-    modalDescription.textContent = data.description;
-    modalIcon.className = `fas ${data.icon} text-4xl`;
+    if (!modal) return;
 
-    // Set icon color
-    const colorClasses = {
-        'green': 'text-green-700',
-        'blue': 'text-blue-700',
-        'teal': 'text-teal-700',
-        'orange': 'text-orange-600',
-        'red': 'text-red-600',
-        'gray': 'text-gray-700'
-    };
-    modalIcon.classList.add(colorClasses[data.color] || 'text-gray-700');
+    if (modalTitle) modalTitle.textContent = data.title;
+    if (modalSubtitle) modalSubtitle.textContent = data.subtitle;
+    if (modalDescription) modalDescription.textContent = data.description;
 
-    // Build details list
-    modalDetails.innerHTML = data.details.map(detail =>
-        `<li class="flex items-start">
-            <i class="fas fa-check-circle text-green-600 mr-2 mt-1"></i>
-            <span>${detail}</span>
-        </li>`
-    ).join('');
+    // Set image
+    if (modalImage && data.image) {
+        modalImage.src = data.image;
+        modalImage.alt = data.title;
+    }
 
+    // Build details as modern chips/tags
+    if (modalDetails) {
+        modalDetails.textContent = '';
+        data.details.forEach(function(detail, index) {
+            const chip = document.createElement('div');
+            chip.className = 'detail-item inline-flex items-center gap-2 bg-slate-100 text-slate-700 px-4 py-2.5 rounded-lg text-xs sm:text-sm font-medium';
+            chip.style.animationDelay = (index * 0.08) + 's';
+
+            const icon = document.createElement('i');
+            icon.className = 'fas fa-check-circle text-hazard text-xs';
+
+            const text = document.createElement('span');
+            text.textContent = detail;
+
+            chip.appendChild(icon);
+            chip.appendChild(text);
+            modalDetails.appendChild(chip);
+        });
+    }
+
+    // Show modal with animation
     modal.classList.remove('hidden');
     modal.classList.add('flex');
     document.body.style.overflow = 'hidden';
+
+    // Trigger animation after a tiny delay
+    requestAnimationFrame(function() {
+        requestAnimationFrame(function() {
+            modal.classList.add('show');
+        });
+    });
 }
 
 function closeModal() {
     const modal = document.getElementById('cert-modal');
-    modal.classList.add('hidden');
-    modal.classList.remove('flex');
-    document.body.style.overflow = 'auto';
+    if (!modal) return;
+
+    // Remove show class to trigger close animation
+    modal.classList.remove('show');
+
+    // Wait for animation to finish before hiding
+    setTimeout(function() {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = 'auto';
+    }, 300);
 }
 
 // Close modal on ESC key

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}Nuestra Flota | Camiones 4 Toneladas | Mar del Sur{% endblock %}
-{% block description %}Flota moderna de camiones 4 toneladas con GPS 24/7, equipamiento completo y certificaciones vigentes. Dimensiones 5,5m carrozable, seguros UF 1.000.{% endblock %}
+{% block description %}Flota moderna de camiones 4 toneladas con GPS 24/7, equipamiento completo y certificaciones vigentes. Dimensiones 5,5m carrozable.{% endblock %}
 
 {% block content %}
 <!-- Hero Section -->
@@ -15,113 +15,150 @@
     </div>
 </section>
 
-<!-- Galería de Fotos -->
-<section class="py-16 bg-gray-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-black text-dark mb-2">Mitsubishi Fuso Canter</h2>
-            <p class="text-gray-600">Nuestro camión en acción - Cobertura desde Puerto Montt a todo Chile</p>
+<!-- Galería de Flota -->
+<section class="py-12 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-8">
+            <span class="text-hazard font-bold tracking-widest uppercase text-sm">Galería</span>
+            <h2 class="text-3xl font-black text-dark mt-2">Nuestra Flota en Acción</h2>
         </div>
 
-        <!-- Galería Principal -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Imagen Principal (más grande) -->
-            <div class="md:col-span-2 lg:col-span-2 relative group overflow-hidden rounded-xl shadow-lg">
-                <picture>
-                    <source srcset="{{ url_for('static', filename='img/flota-fuso-lateral.webp') }}" type="image/webp">
-                    <img src="{{ url_for('static', filename='img/flota-fuso-lateral.jpg') }}"
-                         alt="Camión Mitsubishi Fuso - Vista Lateral"
-                         class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
-                         loading="lazy" width="800" height="600">
-                </picture>
-                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
-                    <span class="bg-hazard text-dark px-3 py-1 rounded-full text-sm font-bold">Mitsubishi Fuso</span>
-                    <p class="text-white mt-2 font-semibold">Capacidad: 4 toneladas | Carrocería con barandas abatibles</p>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <!-- Imagen Principal con Carrusel -->
+            <div class="lg:col-span-2 relative rounded-xl overflow-hidden shadow-lg" id="flota-carousel">
+                <div class="flex transition-transform duration-500 ease-out" id="carousel-track">
+                    <div class="w-full flex-shrink-0">
+                        <picture>
+                            <source srcset="{{ url_for('static', filename='img/flota-fuso-lateral.webp') }}" type="image/webp">
+                            <img src="{{ url_for('static', filename='img/flota-fuso-lateral.jpg') }}" alt="Vista Lateral" class="w-full h-72 md:h-80 object-cover">
+                        </picture>
+                    </div>
+                    <div class="w-full flex-shrink-0">
+                        <picture>
+                            <source srcset="{{ url_for('static', filename='img/flota-fuso-patagonia.webp') }}" type="image/webp">
+                            <img src="{{ url_for('static', filename='img/flota-fuso-patagonia.jpg') }}" alt="Patagonia" class="w-full h-72 md:h-80 object-cover">
+                        </picture>
+                    </div>
+                    <div class="w-full flex-shrink-0">
+                        <picture>
+                            <source srcset="{{ url_for('static', filename='img/flota-fuso-barcaza.webp') }}" type="image/webp">
+                            <img src="{{ url_for('static', filename='img/flota-fuso-barcaza.jpg') }}" alt="Barcaza" class="w-full h-72 md:h-80 object-cover">
+                        </picture>
+                    </div>
+                    <div class="w-full flex-shrink-0">
+                        <picture>
+                            <source srcset="{{ url_for('static', filename='img/flota-fuso-maquinaria2.webp') }}" type="image/webp">
+                            <img src="{{ url_for('static', filename='img/flota-fuso-maquinaria2.jpg') }}" alt="Maquinaria" class="w-full h-72 md:h-80 object-cover">
+                        </picture>
+                    </div>
+                    <div class="w-full flex-shrink-0">
+                        <picture>
+                            <source srcset="{{ url_for('static', filename='img/flota-fuso-industrial.webp') }}" type="image/webp">
+                            <img src="{{ url_for('static', filename='img/flota-fuso-industrial.jpg') }}" alt="Industrial" class="w-full h-72 md:h-80 object-cover">
+                        </picture>
+                    </div>
+                    <div class="w-full flex-shrink-0">
+                        <picture>
+                            <source srcset="{{ url_for('static', filename='img/flota-fuso-frontal.webp') }}" type="image/webp">
+                            <img src="{{ url_for('static', filename='img/flota-fuso-frontal.jpg') }}" alt="Frontal" class="w-full h-72 md:h-80 object-cover">
+                        </picture>
+                    </div>
                 </div>
+                <!-- Overlay con info -->
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                    <span class="bg-hazard text-dark px-3 py-1 rounded text-xs font-bold">Mitsubishi Fuso Canter</span>
+                    <p class="text-white text-sm mt-2">4 toneladas | Barandas abatibles | GPS 24/7</p>
+                </div>
+                <!-- Flechas -->
+                <button onclick="moveCarousel(-1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-hazard w-10 h-10 rounded-full shadow flex items-center justify-center transition" aria-label="Anterior">
+                    <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                </button>
+                <button onclick="moveCarousel(1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-hazard w-10 h-10 rounded-full shadow flex items-center justify-center transition" aria-label="Siguiente">
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </button>
             </div>
 
-            <!-- Imagen Zona Industrial -->
-            <div class="relative group overflow-hidden rounded-xl shadow-lg">
-                <picture>
-                    <source srcset="{{ url_for('static', filename='img/flota-fuso-industrial.webp') }}" type="image/webp">
-                    <img src="{{ url_for('static', filename='img/flota-fuso-industrial.jpg') }}"
-                         alt="Camión en zona industrial"
-                         class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
-                         loading="lazy" width="800" height="600">
-                </picture>
-                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                    <p class="text-white text-sm font-semibold">Servicio en zonas industriales</p>
-                </div>
-            </div>
-
-            <!-- Imagen Patagonia -->
-            <div class="relative group overflow-hidden rounded-xl shadow-lg">
-                <picture>
-                    <source srcset="{{ url_for('static', filename='img/flota-fuso-patagonia.webp') }}" type="image/webp">
-                    <img src="{{ url_for('static', filename='img/flota-fuso-patagonia.jpg') }}"
-                         alt="Camión en Patagonia chilena"
-                         class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                         loading="lazy" width="800" height="600">
-                </picture>
-                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                    <p class="text-white text-sm font-semibold">Cobertura Patagonia</p>
-                </div>
-            </div>
-
-            <!-- Imagen Carga Maquinaria -->
-            <div class="relative group overflow-hidden rounded-xl shadow-lg">
-                <picture>
-                    <source srcset="{{ url_for('static', filename='img/flota-fuso-maquinaria2.webp') }}" type="image/webp">
-                    <img src="{{ url_for('static', filename='img/flota-fuso-maquinaria2.jpg') }}"
-                         alt="Transporte de maquinaria"
-                         class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                         loading="lazy" width="800" height="600">
-                </picture>
-                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                    <p class="text-white text-sm font-semibold">Transporte de maquinaria</p>
-                </div>
-            </div>
-
-            <!-- Imagen Ferry/Barcaza -->
-            <div class="relative group overflow-hidden rounded-xl shadow-lg">
-                <picture>
-                    <source srcset="{{ url_for('static', filename='img/flota-fuso-barcaza.webp') }}" type="image/webp">
-                    <img src="{{ url_for('static', filename='img/flota-fuso-barcaza.jpg') }}"
-                         alt="Camión en barcaza - Carretera Austral"
-                         class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                         loading="lazy" width="800" height="600">
-                </picture>
-                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                    <p class="text-white text-sm font-semibold">Servicio Carretera Austral</p>
-                </div>
+            <!-- Thumbnails laterales -->
+            <div class="grid grid-cols-3 lg:grid-cols-1 gap-2">
+                <button onclick="goToSlide(0)" class="thumbnail-btn rounded-lg overflow-hidden border-2 border-hazard opacity-100 transition-all hover:opacity-100 focus:outline-none" data-index="0">
+                    <picture>
+                        <source srcset="{{ url_for('static', filename='img/flota-fuso-lateral.webp') }}" type="image/webp">
+                        <img src="{{ url_for('static', filename='img/flota-fuso-lateral.jpg') }}" alt="Vista Lateral" class="w-full h-16 lg:h-24 object-cover">
+                    </picture>
+                </button>
+                <button onclick="goToSlide(1)" class="thumbnail-btn rounded-lg overflow-hidden border-2 border-transparent opacity-60 transition-all hover:opacity-100 focus:outline-none" data-index="1">
+                    <picture>
+                        <source srcset="{{ url_for('static', filename='img/flota-fuso-patagonia.webp') }}" type="image/webp">
+                        <img src="{{ url_for('static', filename='img/flota-fuso-patagonia.jpg') }}" alt="Patagonia" class="w-full h-16 lg:h-24 object-cover">
+                    </picture>
+                </button>
+                <button onclick="goToSlide(2)" class="thumbnail-btn rounded-lg overflow-hidden border-2 border-transparent opacity-60 transition-all hover:opacity-100 focus:outline-none" data-index="2">
+                    <picture>
+                        <source srcset="{{ url_for('static', filename='img/flota-fuso-barcaza.webp') }}" type="image/webp">
+                        <img src="{{ url_for('static', filename='img/flota-fuso-barcaza.jpg') }}" alt="Barcaza" class="w-full h-16 lg:h-24 object-cover">
+                    </picture>
+                </button>
+                <button onclick="goToSlide(3)" class="thumbnail-btn rounded-lg overflow-hidden border-2 border-transparent opacity-60 transition-all hover:opacity-100 focus:outline-none hidden lg:block" data-index="3">
+                    <picture>
+                        <source srcset="{{ url_for('static', filename='img/flota-fuso-maquinaria2.webp') }}" type="image/webp">
+                        <img src="{{ url_for('static', filename='img/flota-fuso-maquinaria2.jpg') }}" alt="Maquinaria" class="w-full h-24 object-cover">
+                    </picture>
+                </button>
             </div>
         </div>
 
-        <!-- Características destacadas -->
-        <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-            <div class="bg-white p-4 rounded-lg shadow">
-                <i class="fas fa-truck text-hazard text-2xl mb-2" aria-hidden="true"></i>
-                <p class="font-bold text-dark">4 Toneladas</p>
-                <p class="text-sm text-gray-600">Capacidad de carga</p>
+        <!-- Stats rápidas -->
+        <div class="mt-8 flex flex-wrap justify-center gap-6 text-center">
+            <div class="flex items-center gap-2">
+                <i class="fas fa-truck text-hazard text-xl" aria-hidden="true"></i>
+                <span class="font-bold text-dark">4 Ton</span>
             </div>
-            <div class="bg-white p-4 rounded-lg shadow">
-                <i class="fas fa-ruler-combined text-hazard text-2xl mb-2" aria-hidden="true"></i>
-                <p class="font-bold text-dark">5.5 metros</p>
-                <p class="text-sm text-gray-600">Largo carrozable</p>
+            <div class="flex items-center gap-2">
+                <i class="fas fa-ruler-combined text-hazard text-xl" aria-hidden="true"></i>
+                <span class="font-bold text-dark">5.5m largo</span>
             </div>
-            <div class="bg-white p-4 rounded-lg shadow">
-                <i class="fas fa-satellite-dish text-hazard text-2xl mb-2" aria-hidden="true"></i>
-                <p class="font-bold text-dark">GPS 24/7</p>
-                <p class="text-sm text-gray-600">Monitoreo constante</p>
-            </div>
-            <div class="bg-white p-4 rounded-lg shadow">
-                <i class="fas fa-shield-alt text-hazard text-2xl mb-2" aria-hidden="true"></i>
-                <p class="font-bold text-dark">Seguro UF 1.000</p>
-                <p class="text-sm text-gray-600">Cobertura completa</p>
+            <div class="flex items-center gap-2">
+                <i class="fas fa-satellite-dish text-hazard text-xl" aria-hidden="true"></i>
+                <span class="font-bold text-dark">GPS 24/7</span>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+    let currentSlide = 0;
+    const totalSlides = 6;
+    let autoPlay;
+
+    function moveCarousel(dir) {
+        currentSlide = (currentSlide + dir + totalSlides) % totalSlides;
+        updateCarousel();
+    }
+
+    function goToSlide(i) {
+        currentSlide = i;
+        updateCarousel();
+    }
+
+    function updateCarousel() {
+        document.getElementById('carousel-track').style.transform = `translateX(-${currentSlide * 100}%)`;
+        document.querySelectorAll('.thumbnail-btn').forEach((btn, i) => {
+            if (i === currentSlide) {
+                btn.classList.add('border-hazard', 'opacity-100');
+                btn.classList.remove('border-transparent', 'opacity-60');
+            } else {
+                btn.classList.remove('border-hazard', 'opacity-100');
+                btn.classList.add('border-transparent', 'opacity-60');
+            }
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        autoPlay = setInterval(() => moveCarousel(1), 4000);
+        document.getElementById('flota-carousel').addEventListener('mouseenter', () => clearInterval(autoPlay));
+        document.getElementById('flota-carousel').addEventListener('mouseleave', () => { autoPlay = setInterval(() => moveCarousel(1), 4000); });
+    });
+</script>
 
 <!-- Vehicle Specs Section -->
 <section class="py-20 bg-white">
@@ -230,23 +267,7 @@
             <p class="text-gray-600">Todo lo necesario para un transporte seguro</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Insurance -->
-            <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-blue-600">
-                <div class="text-center mb-4">
-                    <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                        <i class="fas fa-shield-alt text-3xl text-blue-600"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-dark">Seguros Vigentes</h3>
-                </div>
-                <ul class="space-y-2 text-gray-600 text-sm">
-                    <li><i class="fas fa-check text-blue-600 mr-2"></i>Seguro obligatorio SOAP</li>
-                    <li><i class="fas fa-check text-blue-600 mr-2"></i>Seguro de responsabilidad civil</li>
-                    <li><i class="fas fa-check text-blue-600 mr-2"></i>Cobertura UF 1.000</li>
-                    <li><i class="fas fa-check text-blue-600 mr-2"></i>Pólizas al día</li>
-                </ul>
-            </div>
-
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <!-- Documentation -->
             <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-green-600">
                 <div class="text-center mb-4">
