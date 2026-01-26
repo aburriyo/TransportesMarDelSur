@@ -1,7 +1,111 @@
 {% extends "base.html" %}
 
-{% block title %}Transporte en Puerto Montt | Logística Región de Los Lagos | Transportes Mar del Sur{% endblock %}
-{% block description %}Transporte de carga, RESPEL y REAS en Puerto Montt y Región de Los Lagos. Cobertura nacional desde el sur de Chile. Cotiza con Transportes Mar del Sur.{% endblock %}
+{% set breadcrumbs = [
+    {'name': 'Transporte Puerto Montt', 'url': '/transporte-puerto-montt'}
+] %}
+
+{% block title %}Transporte RESPEL y REAS en Puerto Montt | Región de Los Lagos | Mar del Sur{% endblock %}
+{% block description %}Transporte especializado de sustancias peligrosas (RESPEL), residuos hospitalarios (REAS), carga general y almacenaje en Puerto Montt, Región de Los Lagos. Base en Francisco Sepúlveda Gutiérrez 6180. Resolución Sanitaria N° 2510389969. Cobertura Osorno, Chiloé, Palena, Llanquihue y nacional desde el sur de Chile.{% endblock %}
+
+{% block canonical %}https://www.transportesmardelsur.cl/transporte-puerto-montt{% endblock %}
+
+{% block og_url %}https://www.transportesmardelsur.cl/transporte-puerto-montt{% endblock %}
+{% block og_title %}Transporte Especializado en Puerto Montt - Los Lagos{% endblock %}
+{% block og_description %}Transporte RESPEL, REAS, carga general y almacenaje en Puerto Montt. Resolución Sanitaria vigente. Cobertura nacional desde Los Lagos.{% endblock %}
+
+{% block additional_schema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Transportes Mar del Sur SPA - Puerto Montt",
+  "image": "https://www.transportesmardelsur.cl/static/img/logo.png",
+  "description": "Empresa de transporte especializado en Puerto Montt. Servicios de transporte RESPEL, REAS, carga general y almacenaje con cobertura nacional.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Francisco Sepúlveda Gutiérrez 6180",
+    "addressLocality": "Puerto Montt",
+    "addressRegion": "Región de Los Lagos",
+    "postalCode": "5480000",
+    "addressCountry": "CL"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "-41.4693",
+    "longitude": "-72.9424"
+  },
+  "url": "https://www.transportesmardelsur.cl/transporte-puerto-montt",
+  "telephone": "+56942857502",
+  "email": "Transportesmardelsur@gmail.com",
+  "priceRange": "$$",
+  "openingHours": "Mo-Su 00:00-23:59",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Puerto Montt"
+    },
+    {
+      "@type": "City",
+      "name": "Osorno"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Chiloé"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Palena"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Llanquihue"
+    },
+    {
+      "@type": "Country",
+      "name": "Chile"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios de Transporte Especializado",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Transporte RESPEL",
+          "description": "Transporte de sustancias peligrosas con Resolución Sanitaria vigente"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Transporte REAS",
+          "description": "Transporte de residuos hospitalarios desde centros de salud"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Transporte Carga General",
+          "description": "Camiones 4 toneladas con GPS 24/7"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Almacenaje y Bodegaje",
+          "description": "Infraestructura propia en Puerto Montt para almacenaje seguro"
+        }
+      }
+    ]
+  }
+}
+</script>
+{% endblock %}
 
 {% block content %}
 <!-- Hero Section -->

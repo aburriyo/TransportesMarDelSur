@@ -1,7 +1,53 @@
 {% extends "base.html" %}
 
-{% block title %}Sobre Nosotros | Tu Socio en Transporte y Almacenaje | Mar del Sur{% endblock %}
-{% block description %}Transportes Mar del Sur: soluciones integrales de transporte y almacenaje en Chile. Especialistas en RESPEL, REAS y carga general. Cobertura nacional desde Puerto Montt.{% endblock %}
+{% set breadcrumbs = [
+    {'name': 'Sobre Nosotros', 'url': '/nosotros'}
+] %}
+
+{% block title %}Sobre Nosotros - Transportes Mar del Sur | Puerto Montt | Especialistas RESPEL{% endblock %}
+{% block description %}Transportes Mar del Sur SPA (RUT: 77.779.818-9): empresa de transporte y almacenaje en Puerto Montt, Los Lagos. Especialistas en RESPEL, REAS y carga general con Resolución Sanitaria N° 2510389969. Cobertura nacional desde 2023. Flota moderna con GPS 24/7.{% endblock %}
+
+{% block canonical %}https://www.transportesmardelsur.cl/nosotros{% endblock %}
+
+{% block og_url %}https://www.transportesmardelsur.cl/nosotros{% endblock %}
+{% block og_title %}Sobre Nosotros - Transportes Mar del Sur | Puerto Montt{% endblock %}
+{% block og_description %}Empresa especializada en transporte de sustancias peligrosas y almacenaje en Puerto Montt. Resolución Sanitaria vigente, cobertura nacional.{% endblock %}
+
+{% block additional_schema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "Sobre Nosotros - Transportes Mar del Sur",
+  "description": "Información sobre Transportes Mar del Sur SPA, empresa especializada en transporte de sustancias peligrosas y almacenaje",
+  "mainEntity": {
+    "@type": "LocalBusiness",
+    "name": "Transportes Mar del Sur SPA",
+    "foundingDate": "2023-08",
+    "taxID": "77.779.818-9",
+    "description": "Empresa especializada en transporte de sustancias peligrosas (RESPEL), residuos hospitalarios (REAS) y almacenaje. Con Resolución Sanitaria vigente y cobertura nacional desde Puerto Montt.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Francisco Sepúlveda Gutiérrez 6180",
+      "addressLocality": "Puerto Montt",
+      "addressRegion": "Región de Los Lagos",
+      "addressCountry": "CL"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Chile"
+    },
+    "knowsAbout": [
+      "Transporte de sustancias peligrosas",
+      "Transporte de residuos hospitalarios",
+      "Logística RESPEL",
+      "Almacenaje seguro",
+      "Gestión documental SIDREP"
+    ]
+  }
+}
+</script>
+{% endblock %}
 
 {% block content %}
 <!-- Hero Section -->

@@ -1,7 +1,65 @@
 {% extends "base.html" %}
 
-{% block title %}Certificaciones | DS 298, NCh 2190, SIDREP | Mar del Sur{% endblock %}
-{% block description %}Certificaciones oficiales: Resolución Sanitaria vigente, DS 298, NCh 2190, SIDREP. Cumplimiento normativo garantizado para transporte de sustancias peligrosas.{% endblock %}
+{% set breadcrumbs = [
+    {'name': 'Certificaciones', 'url': '/certificaciones'}
+] %}
+
+{% block title %}Certificaciones DS 298, NCh 2190, SIDREP y Resolución Sanitaria | Mar del Sur{% endblock %}
+{% block description %}Certificaciones oficiales vigentes: Resolución Sanitaria N° 2510389969 (Ministerio de Salud), DS 298 (transporte carga peligrosa), NCh 2190 (clasificación peligrosidad), SIDREP (declaración residuos peligrosos). Transporte RESPEL y REAS autorizado en Chile.{% endblock %}
+
+{% block canonical %}https://www.transportesmardelsur.cl/certificaciones{% endblock %}
+
+{% block og_url %}https://www.transportesmardelsur.cl/certificaciones{% endblock %}
+{% block og_title %}Certificaciones Oficiales - Transportes Mar del Sur{% endblock %}
+{% block og_description %}Resolución Sanitaria vigente, DS 298, NCh 2190, SIDREP. Cumplimiento normativo garantizado para transporte RESPEL y REAS.{% endblock %}
+
+{% block additional_schema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Transportes Mar del Sur SPA",
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Resolución Sanitaria N° 2510389969",
+      "description": "Autorización del Ministerio de Salud para transporte de sustancias peligrosas y residuos hospitalarios",
+      "credentialCategory": "license",
+      "recognizedBy": {
+        "@type": "GovernmentOrganization",
+        "name": "Ministerio de Salud de Chile"
+      }
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "DS 298",
+      "description": "Cumplimiento Decreto Supremo 298 sobre transporte de cargas peligrosas por calles y caminos",
+      "credentialCategory": "certification",
+      "recognizedBy": {
+        "@type": "GovernmentOrganization",
+        "name": "Ministerio de Transportes y Telecomunicaciones"
+      }
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "NCh 2190",
+      "description": "Norma Chilena 2190 sobre clasificación de sustancias peligrosas",
+      "credentialCategory": "certification"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "SIDREP",
+      "description": "Inscripción en Sistema de Declaración y Seguimiento de Residuos Peligrosos",
+      "credentialCategory": "certification",
+      "recognizedBy": {
+        "@type": "GovernmentOrganization",
+        "name": "Ministerio del Medio Ambiente"
+      }
+    }
+  ]
+}
+</script>
+{% endblock %}
 
 {% block content %}
 <!-- Hero Section -->

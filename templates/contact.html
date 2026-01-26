@@ -1,7 +1,46 @@
 {% extends "base.html" %}
 
-{% block title %}Contacto | Solicitar Cotización | Mar del Sur{% endblock %}
-{% block description %}Contáctanos para cotizar servicios de transporte RESPEL, REAS y carga general. Respuesta en 24 horas. WhatsApp +56 9 42857502{% endblock %}
+{% set breadcrumbs = [
+    {'name': 'Contacto', 'url': '/contacto'}
+] %}
+
+{% block title %}Contacto - Cotizar Transporte RESPEL y REAS | Puerto Montt | Mar del Sur{% endblock %}
+{% block description %}Solicita cotización para transporte de sustancias peligrosas (RESPEL), residuos hospitalarios (REAS) y carga general en Puerto Montt y Los Lagos. Respuesta en 24 horas. WhatsApp +56 9 42857502. Email: Transportesmardelsur@gmail.com{% endblock %}
+
+{% block canonical %}https://www.transportesmardelsur.cl/contacto{% endblock %}
+
+{% block og_url %}https://www.transportesmardelsur.cl/contacto{% endblock %}
+{% block og_title %}Contacto - Transportes Mar del Sur | Puerto Montt{% endblock %}
+{% block og_description %}Solicita cotización para transporte especializado en Puerto Montt. Respuesta en 24 horas. WhatsApp +56 9 42857502{% endblock %}
+
+{% block additional_schema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contacto - Transportes Mar del Sur",
+  "description": "Página de contacto para solicitar cotizaciones de servicios de transporte RESPEL, REAS y carga general",
+  "mainEntity": {
+    "@type": "LocalBusiness",
+    "name": "Transportes Mar del Sur SPA",
+    "telephone": "+56942857502",
+    "email": "Transportesmardelsur@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Francisco Sepúlveda Gutiérrez 6180",
+      "addressLocality": "Puerto Montt",
+      "addressRegion": "Región de Los Lagos",
+      "addressCountry": "CL"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Chile"
+    },
+    "openingHours": "Mo-Su 00:00-23:59"
+  }
+}
+</script>
+{% endblock %}
 
 {% block content %}
 <!-- Hero Section -->

@@ -1,7 +1,41 @@
 {% extends "base.html" %}
 
-{% block title %}Nuestra Flota | Camiones 4 Toneladas | Mar del Sur{% endblock %}
-{% block description %}Flota moderna de camiones 4 toneladas con GPS 24/7, equipamiento completo y certificaciones vigentes. Dimensiones 5,5m carrozable.{% endblock %}
+{% set breadcrumbs = [
+    {'name': 'Flota', 'url': '/flota'}
+] %}
+
+{% block title %}Flota de Camiones para Transporte RESPEL | 4 Toneladas con GPS | Mar del Sur{% endblock %}
+{% block description %}Flota moderna de camiones 4 toneladas (4.130 kg) para transporte de sustancias peligrosas en Puerto Montt y Los Lagos. GPS 24/7, carrocería barandas abatibles 5,5m, equipamiento DS 298, seguros vigentes. Mitsubishi Fuso Canter certificados para RESPEL y REAS.{% endblock %}
+
+{% block canonical %}https://www.transportesmardelsur.cl/flota{% endblock %}
+
+{% block og_url %}https://www.transportesmardelsur.cl/flota{% endblock %}
+{% block og_title %}Flota de Camiones - Transportes Mar del Sur{% endblock %}
+{% block og_description %}Camiones 4 toneladas equipados con GPS 24/7, certificados para transporte RESPEL y REAS. Flota moderna y segura.{% endblock %}
+
+{% block additional_schema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Flota de Camiones para Transporte RESPEL",
+  "description": "Camiones Mitsubishi Fuso Canter 4 toneladas equipados para transporte de sustancias peligrosas con GPS 24/7",
+  "brand": {
+    "@type": "Brand",
+    "name": "Mitsubishi Fuso"
+  },
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "CLP",
+    "availability": "https://schema.org/InStock"
+  },
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Transportes Mar del Sur SPA"
+  }
+}
+</script>
+{% endblock %}
 
 {% block content %}
 <!-- Hero Section -->

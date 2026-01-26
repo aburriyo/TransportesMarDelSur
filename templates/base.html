@@ -11,7 +11,7 @@
     <meta name="keywords" content="transporte respel, transporte reas, sustancias peligrosas chile, residuos peligrosos puerto montt, resolución sanitaria, sidrep, transporte residuos hospitalarios, logística respel, transporte materiales peligrosos, ds 298, transporte carga peligrosa chile, transporte residuos salud">
     <meta name="author" content="Transportes Mar del Sur SPA">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <link rel="canonical" href="https://www.transportesmardelsur.cl/">
+    <link rel="canonical" href="{% block canonical %}https://www.transportesmardelsur.cl/{% endblock %}">
 
     <!-- Geo Tags -->
     <meta name="geo.region" content="CL-LL">
@@ -29,18 +29,18 @@
     <meta name="msapplication-TileColor" content="#FFD600">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.transportesmardelsur.cl/">
-    <meta property="og:title" content="Transportes RESPEL y REAS | Resolución Sanitaria | Mar del Sur">
-    <meta property="og:description" content="Transportes Mar del Sur: Transporte especializado de sustancias peligrosas con Resolución Sanitaria vigente. SIDREP, GPS 24/7, cobertura nacional desde Puerto Montt.">
+    <meta property="og:type" content="{% block og_type %}website{% endblock %}">
+    <meta property="og:url" content="{% block og_url %}https://www.transportesmardelsur.cl/{% endblock %}">
+    <meta property="og:title" content="{% block og_title %}Transportes RESPEL y REAS | Resolución Sanitaria | Mar del Sur{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Transportes Mar del Sur: Transporte especializado de sustancias peligrosas con Resolución Sanitaria vigente. SIDREP, GPS 24/7, cobertura nacional desde Puerto Montt.{% endblock %}">
     <meta property="og:image" content="https://www.transportesmardelsur.cl/static/img/og-image.jpg">
     <meta property="og:locale" content="es_CL">
     <meta property="og:site_name" content="Transportes Mar del Sur">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Transportes RESPEL y REAS | Mar del Sur">
-    <meta name="twitter:description" content="Transportes Mar del Sur: Transporte especializado de sustancias peligrosas con Resolución Sanitaria vigente. Cobertura nacional desde Puerto Montt.">
+    <meta name="twitter:title" content="{% block twitter_title %}Transportes RESPEL y REAS | Mar del Sur{% endblock %}">
+    <meta name="twitter:description" content="{% block twitter_description %}Transportes Mar del Sur: Transporte especializado de sustancias peligrosas con Resolución Sanitaria vigente. Cobertura nacional desde Puerto Montt.{% endblock %}">
     <meta name="twitter:image" content="https://www.transportesmardelsur.cl/static/img/og-image.jpg">
 
     <!-- Business Info -->
@@ -155,6 +155,9 @@
       }
     }
     </script>
+
+    <!-- Additional Page-Specific Schema.org Structured Data -->
+    {% block additional_schema %}{% endblock %}
 
     <!-- Preload critical CSS -->
     <link rel="preload" href="{{ url_for('static', filename='css/tailwind.css') }}" as="style">
@@ -339,6 +342,8 @@
     <div class="h-2 hazard-stripe w-full"></div>
 
     {% include 'navbar.html' ignore missing %}
+
+    {% include 'breadcrumbs.html' ignore missing %}
 
     <main class="flex-grow overflow-x-hidden">
         {% block content %}{% endblock %}

@@ -1,0 +1,29 @@
+<!-- Breadcrumbs Navigation -->
+{% if breadcrumbs %}
+<nav aria-label="Breadcrumb" class="bg-gray-50 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+        <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="/" class="text-gray-600 hover:text-hazard transition" itemprop="item">
+                    <span itemprop="name">Inicio</span>
+                </a>
+                <meta itemprop="position" content="1" />
+            </li>
+            {% for crumb in breadcrumbs %}
+            <li class="flex items-center" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <i class="fas fa-chevron-right text-gray-400 text-xs mx-2"></i>
+                {% if loop.last %}
+                <span class="text-dark font-semibold" itemprop="name">{{ crumb.name }}</span>
+                <meta itemprop="item" content="https://www.transportesmardelsur.cl{{ crumb.url }}" />
+                {% else %}
+                <a href="{{ crumb.url }}" class="text-gray-600 hover:text-hazard transition" itemprop="item">
+                    <span itemprop="name">{{ crumb.name }}</span>
+                </a>
+                {% endif %}
+                <meta itemprop="position" content="{{ loop.index + 1 }}" />
+            </li>
+            {% endfor %}
+        </ol>
+    </div>
+</nav>
+{% endif %}

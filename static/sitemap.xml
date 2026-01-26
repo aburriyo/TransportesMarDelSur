@@ -5,7 +5,7 @@
   <!-- Página Principal -->
   <url>
     <loc>https://www.transportesmardelsur.cl/</loc>
-    <lastmod>2026-01-23</lastmod>
+    <lastmod>2024-01-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -15,76 +15,76 @@
     </image:image>
   </url>
 
-  <!-- Página Servicios -->
+  <!-- Página Servicios - SEO Optimized -->
   <url>
     <loc>https://www.transportesmardelsur.cl/servicios</loc>
-    <lastmod>2026-01-23</lastmod>
+    <lastmod>2024-01-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Página Certificaciones -->
+  <!-- Página Certificaciones - SEO Optimized -->
   <url>
     <loc>https://www.transportesmardelsur.cl/certificaciones</loc>
-    <lastmod>2026-01-23</lastmod>
+    <lastmod>2024-01-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Página Flota -->
+  <!-- Página Flota - SEO Optimized -->
   <url>
     <loc>https://www.transportesmardelsur.cl/flota</loc>
-    <lastmod>2026-01-23</lastmod>
+    <lastmod>2024-01-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Página FAQ -->
+  <!-- Página FAQ - SEO Optimized -->
   <url>
     <loc>https://www.transportesmardelsur.cl/faq</loc>
-    <lastmod>2026-01-23</lastmod>
+    <lastmod>2024-01-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
-  <!-- Página Contacto -->
+  <!-- Página Contacto - SEO Optimized -->
   <url>
     <loc>https://www.transportesmardelsur.cl/contacto</loc>
-    <lastmod>2026-01-23</lastmod>
+    <lastmod>2024-01-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Página Nosotros -->
+  <!-- Página Nosotros - SEO Optimized -->
   <url>
     <loc>https://www.transportesmardelsur.cl/nosotros</loc>
-    <lastmod>2026-01-23</lastmod>
+    <lastmod>2024-01-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Landing Page RESPEL -->
+  <!-- Landing Page RESPEL - SEO Optimized -->
   <url>
     <loc>https://www.transportesmardelsur.cl/que-es-respel</loc>
-    <lastmod>2026-01-26</lastmod>
+    <lastmod>2024-01-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
 
-  <!-- Landing Page REAS -->
+  <!-- Landing Page REAS - SEO Optimized -->
   <url>
     <loc>https://www.transportesmardelsur.cl/que-es-reas</loc>
-    <lastmod>2026-01-26</lastmod>
+    <lastmod>2024-01-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
 
-  <!-- Landing Page Transporte Puerto Montt -->
+  <!-- Landing Page Transporte Puerto Montt - Local SEO -->
   <url>
     <loc>https://www.transportesmardelsur.cl/transporte-puerto-montt</loc>
-    <lastmod>2026-01-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2024-01-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
 </urlset>

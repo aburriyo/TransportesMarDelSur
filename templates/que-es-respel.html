@@ -1,7 +1,63 @@
 {% extends "base.html" %}
 
-{% block title %}¿Qué es RESPEL? | Residuos Peligrosos en Chile | Transportes Mar del Sur{% endblock %}
-{% block description %}RESPEL son los Residuos Peligrosos regulados en Chile. Conoce el marco legal (DS 148, DS 298), clasificación NCh 2190 y cómo Transportes Mar del Sur gestiona su transporte seguro.{% endblock %}
+{% set breadcrumbs = [
+    {'name': '¿Qué es RESPEL?', 'url': '/que-es-respel'}
+] %}
+
+{% block title %}¿Qué es RESPEL? Residuos Peligrosos en Chile | DS 148 y DS 298 | Mar del Sur{% endblock %}
+{% block description %}RESPEL: Residuos Peligrosos en Chile regulados por DS 148 y DS 298. Definición, clasificación NCh 2190, ejemplos (aceites usados, solventes, baterías), marco legal y transporte seguro. Transportes Mar del Sur: especialistas en transporte RESPEL con Resolución Sanitaria en Puerto Montt y Los Lagos.{% endblock %}
+
+{% block canonical %}https://www.transportesmardelsur.cl/que-es-respel{% endblock %}
+
+{% block og_url %}https://www.transportesmardelsur.cl/que-es-respel{% endblock %}
+{% block og_title %}¿Qué es RESPEL? Guía Completa sobre Residuos Peligrosos en Chile{% endblock %}
+{% block og_description %}Aprende sobre RESPEL: definición, marco legal (DS 148, DS 298), clasificación y transporte seguro de residuos peligrosos en Chile.{% endblock %}
+
+{% block additional_schema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "¿Qué es RESPEL? Residuos Peligrosos en Chile",
+  "description": "Guía completa sobre RESPEL (Residuos Peligrosos) en Chile: definición, marco legal, clasificación y transporte seguro",
+  "author": {
+    "@type": "Organization",
+    "name": "Transportes Mar del Sur SPA"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Transportes Mar del Sur SPA",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.transportesmardelsur.cl/static/img/logo.png"
+    }
+  },
+  "datePublished": "2024-01-26",
+  "dateModified": "2024-01-26",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.transportesmardelsur.cl/que-es-respel"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "RESPEL",
+      "description": "Residuos Peligrosos regulados en Chile"
+    },
+    {
+      "@type": "Thing",
+      "name": "DS 148",
+      "description": "Reglamento Sanitario sobre Manejo de Residuos Peligrosos"
+    },
+    {
+      "@type": "Thing",
+      "name": "DS 298",
+      "description": "Decreto Supremo sobre Transporte de Cargas Peligrosas"
+    }
+  ]
+}
+</script>
+{% endblock %}
 
 {% block content %}
 <!-- Hero Section -->

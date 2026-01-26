@@ -1,7 +1,58 @@
 {% extends "base.html" %}
 
-{% block title %}¿Qué es REAS? | Residuos Hospitalarios Chile | Transportes Mar del Sur{% endblock %}
-{% block description %}REAS son los Residuos de Establecimientos de Atención de Salud. Conoce el marco legal (DS 6/2009 MINSAL), tipos de residuos y cómo Transportes Mar del Sur gestiona su transporte seguro.{% endblock %}
+{% set breadcrumbs = [
+    {'name': '¿Qué es REAS?', 'url': '/que-es-reas'}
+] %}
+
+{% block title %}¿Qué es REAS? Residuos Hospitalarios en Chile | DS 6/2009 MINSAL | Mar del Sur{% endblock %}
+{% block description %}REAS: Residuos de Establecimientos de Atención de Salud en Chile regulados por DS 6/2009 MINSAL. Definición, tipos (peligrosos, especiales, asimilables), ejemplos de generadores (hospitales, clínicas, laboratorios). Transporte especializado REAS en Puerto Montt y Los Lagos con Resolución Sanitaria.{% endblock %}
+
+{% block canonical %}https://www.transportesmardelsur.cl/que-es-reas{% endblock %}
+
+{% block og_url %}https://www.transportesmardelsur.cl/que-es-reas{% endblock %}
+{% block og_title %}¿Qué es REAS? Guía sobre Residuos Hospitalarios en Chile{% endblock %}
+{% block og_description %}Aprende sobre REAS: definición, tipos de residuos hospitalarios, marco legal (DS 6/2009 MINSAL) y transporte seguro en Chile.{% endblock %}
+
+{% block additional_schema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "¿Qué es REAS? Residuos de Establecimientos de Atención de Salud",
+  "description": "Guía completa sobre REAS (Residuos Hospitalarios) en Chile: definición, marco legal, tipos y transporte seguro",
+  "author": {
+    "@type": "Organization",
+    "name": "Transportes Mar del Sur SPA"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Transportes Mar del Sur SPA",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.transportesmardelsur.cl/static/img/logo.png"
+    }
+  },
+  "datePublished": "2024-01-26",
+  "dateModified": "2024-01-26",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.transportesmardelsur.cl/que-es-reas"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "REAS",
+      "description": "Residuos de Establecimientos de Atención de Salud"
+    },
+    {
+      "@type": "Thing",
+      "name": "DS 6/2009 MINSAL",
+      "description": "Reglamento sobre Manejo de Residuos de Establecimientos de Atención de Salud"
+    }
+  ]
+}
+</script>
+{% endblock %}
 
 {% block content %}
 <!-- Hero Section -->

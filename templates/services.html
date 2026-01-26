@@ -1,7 +1,80 @@
 {% extends "base.html" %}
 
-{% block title %}Nuestros Servicios | Transportes RESPEL y REAS | Mar del Sur{% endblock %}
-{% block description %}Servicios especializados de transporte de sustancias peligrosas, carga general, almacenaje y gestión documental. Resolución Sanitaria vigente, cobertura nacional.{% endblock %}
+{% set breadcrumbs = [
+    {'name': 'Servicios', 'url': '/servicios'}
+] %}
+
+{% block title %}Servicios de Transporte RESPEL, REAS y Almacenaje | Puerto Montt | Mar del Sur{% endblock %}
+{% block description %}Transporte especializado de sustancias peligrosas (RESPEL), residuos hospitalarios (REAS), carga general y almacenaje en Puerto Montt. Resolución Sanitaria vigente N° 2510389969. Gestión documental SIDREP incluida. Cobertura Región de Los Lagos y nacional.{% endblock %}
+
+{% block canonical %}https://www.transportesmardelsur.cl/servicios{% endblock %}
+
+{% block og_url %}https://www.transportesmardelsur.cl/servicios{% endblock %}
+{% block og_title %}Servicios de Transporte RESPEL y REAS - Transportes Mar del Sur{% endblock %}
+{% block og_description %}Transporte de sustancias peligrosas, residuos hospitalarios, carga general y almacenaje seguro. Resolución Sanitaria vigente. Puerto Montt, Chile.{% endblock %}
+
+{% block additional_schema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ServiceCatalog",
+  "name": "Servicios de Transporte Mar del Sur",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Transportes Mar del Sur SPA"
+  },
+  "itemListElement": [
+    {
+      "@type": "Service",
+      "name": "Transporte RESPEL",
+      "description": "Transporte especializado de sustancias peligrosas con resolución sanitaria vigente N° 2510389969. Cumplimiento DS 298 y NCh 2190.",
+      "areaServed": "Chile",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Transportes Mar del Sur SPA"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Transporte RESPEL"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Transporte REAS",
+      "description": "Transporte de residuos de establecimientos de atención de salud (REAS). Manejo seguro de residuos hospitalarios.",
+      "areaServed": "Chile",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Transportes Mar del Sur SPA"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Transporte Carga General",
+      "description": "Transporte de carga general hasta 4 toneladas. Flota moderna con GPS 24/7.",
+      "areaServed": "Chile",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Transportes Mar del Sur SPA"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Almacenaje y Bodegaje",
+      "description": "Infraestructura propia para almacenaje seguro, consolidación de cargas y gestión de inventario.",
+      "areaServed": {
+        "@type": "City",
+        "name": "Puerto Montt"
+      },
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Transportes Mar del Sur SPA"
+      }
+    }
+  ]
+}
+</script>
+{% endblock %}
 
 {% block content %}
 <!-- Hero Section -->

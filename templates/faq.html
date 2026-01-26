@@ -1,7 +1,84 @@
 {% extends "base.html" %}
 
-{% block title %}Preguntas Frecuentes | FAQ | Mar del Sur{% endblock %}
-{% block description %}Respuestas a las preguntas más frecuentes sobre nuestros servicios de transporte RESPEL, REAS, certificaciones, cobertura y cotizaciones.{% endblock %}
+{% set breadcrumbs = [
+    {'name': 'Preguntas Frecuentes', 'url': '/faq'}
+] %}
+
+{% block title %}Preguntas Frecuentes sobre Transporte RESPEL y REAS | FAQ | Mar del Sur{% endblock %}
+{% block description %}Respuestas a las preguntas frecuentes sobre transporte de sustancias peligrosas (RESPEL), residuos hospitalarios (REAS), certificaciones DS 298, Resolución Sanitaria, SIDREP, cobertura en Puerto Montt y Los Lagos, cotizaciones y documentación requerida.{% endblock %}
+
+{% block canonical %}https://www.transportesmardelsur.cl/faq{% endblock %}
+
+{% block og_url %}https://www.transportesmardelsur.cl/faq{% endblock %}
+{% block og_title %}Preguntas Frecuentes - Transportes Mar del Sur{% endblock %}
+{% block og_description %}Respuestas a preguntas sobre transporte RESPEL, REAS, certificaciones, cobertura y cotizaciones.{% endblock %}
+
+{% block additional_schema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuentan con resolución sanitaria vigente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, contamos con Resolución Sanitaria N° 2510389969 emitida por el Ministerio de Salud, vigente y al día. Estamos autorizados para el transporte de sustancias peligrosas (RESPEL) y residuos de establecimientos de atención de salud (REAS)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué capacidad de carga manejan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nuestros vehículos tienen una capacidad de carga útil de 4.130 kg (4 toneladas), con carrocería de barandas abatibles y largo carrozable de 5,5 metros. Ideal para cargas voluminosas y sustancias peligrosas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Están inscritos en SIDREP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, estamos inscritos en la ventanilla única del sistema sectorial SIDREP (Sistema de Declaración y Seguimiento de Residuos Peligrosos). Además, ofrecemos asesoría en trámites y gestión documental para nuestros clientes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué cobertura geográfica tienen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nuestra base de operaciones está en Puerto Montt, Región de Los Lagos, pero ofrecemos cobertura nacional a lo largo de todo Chile. Todos nuestros servicios incluyen monitoreo GPS 24/7 para seguimiento en tiempo real."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuál es el tiempo de respuesta para cotizaciones?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Respondemos cotizaciones en un plazo máximo de 24 horas. La disponibilidad de nuestros camiones es de 24 horas posterior a la confirmación del servicio. Para urgencias, puede contactarnos directamente al +56 9 42857502."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué documentación necesito para contratar sus servicios?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Para servicios de transporte RESPEL y REAS necesitará: declaración de residuos peligrosos, hojas de seguridad del material, ficha técnica, y documentación de la empresa generadora. Nuestro equipo puede asesorarlo en la preparación de toda la documentación necesaria."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Ofrecen servicio de disposición final?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, contamos con convenios con plantas autorizadas para la disposición final de residuos peligrosos y REAS. Ofrecemos el servicio completo desde el retiro hasta la entrega de certificados de disposición final."
+      }
+    }
+  ]
+}
+</script>
+{% endblock %}
 
 {% block content %}
 <!-- Hero Section -->
