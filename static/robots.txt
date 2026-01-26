@@ -9,6 +9,9 @@ Allow: /flota
 Allow: /faq
 Allow: /contacto
 Allow: /nosotros
+Allow: /que-es-respel
+Allow: /que-es-reas
+Allow: /transporte-puerto-montt
 Allow: /static/
 
 # Archivos específicos permitidos

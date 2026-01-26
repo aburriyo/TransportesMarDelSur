@@ -55,6 +55,19 @@ def contacto():
 def nosotros():
     return render_template('about.html')
 
+# SEO Landing Pages
+@app.route('/que-es-respel')
+def que_es_respel():
+    return render_template('que-es-respel.html')
+
+@app.route('/que-es-reas')
+def que_es_reas():
+    return render_template('que-es-reas.html')
+
+@app.route('/transporte-puerto-montt')
+def transporte_puerto_montt():
+    return render_template('transporte-puerto-montt.html')
+
 # Legacy route - redirect old single page (keep for backwards compatibility)
 @app.route('/index')
 def index():

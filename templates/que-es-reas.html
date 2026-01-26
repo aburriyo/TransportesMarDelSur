@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+
+{% block title %}¿Qué es REAS? | Residuos Hospitalarios Chile | Transportes Mar del Sur{% endblock %}
+{% block description %}REAS son los Residuos de Establecimientos de Atención de Salud. Conoce el marco legal (DS 6/2009 MINSAL), tipos de residuos y cómo Transportes Mar del Sur gestiona su transporte seguro.{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="text-hazard font-bold tracking-widest uppercase text-sm">Información Especializada</span>
+        <h1 class="text-5xl md:text-6xl font-black mt-4 mb-6">¿QUÉ ES REAS?</h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Todo lo que necesitas saber sobre los Residuos de Establecimientos de Atención de Salud en Chile
+        </p>
+    </div>
+</section>
+
+<!-- Definición de REAS -->
+<section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-12">
+            <h2 class="text-3xl font-black text-dark mb-6">Definición de REAS</h2>
+            <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                <strong>REAS</strong> es la sigla para <strong>Residuos de Establecimientos de Atención de Salud</strong>. Son todos aquellos residuos generados en hospitales, clínicas, consultorios, laboratorios, farmacias, centros de investigación y otros establecimientos de salud.
+            </p>
+            <p class="text-gray-700 text-lg leading-relaxed">
+                Estos residuos requieren un manejo especial debido a su potencial riesgo biológico, químico o radiactivo, tanto para las personas como para el medio ambiente.
+            </p>
+        </div>
+
+        <div class="bg-light p-8 rounded-lg border-l-4 border-red-500 mb-12">
+            <h3 class="text-xl font-bold text-dark mb-3">
+                <i class="fas fa-hospital text-red-500 mr-2"></i>
+                Establecimientos que generan REAS
+            </h3>
+            <ul class="text-gray-700 space-y-2">
+                <li><i class="fas fa-check text-red-500 mr-2"></i>Hospitales y clínicas</li>
+                <li><i class="fas fa-check text-red-500 mr-2"></i>Consultorios y centros de salud</li>
+                <li><i class="fas fa-check text-red-500 mr-2"></i>Laboratorios clínicos y de investigación</li>
+                <li><i class="fas fa-check text-red-500 mr-2"></i>Farmacias y droguerías</li>
+                <li><i class="fas fa-check text-red-500 mr-2"></i>Centros veterinarios</li>
+                <li><i class="fas fa-check text-red-500 mr-2"></i>Bancos de sangre y hemoderivados</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Marco Legal -->
+<section class="py-16 bg-light">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-black text-dark mb-8 text-center">Marco Legal en Chile</h2>
+        <div class="bg-white p-8 rounded-lg shadow-md border-t-4 border-blue-600 max-w-2xl mx-auto">
+            <div class="text-center mb-4">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
+                    <i class="fas fa-balance-scale text-3xl text-blue-600"></i>
+                </div>
+                <h3 class="text-xl font-bold text-dark">DS 6/2009 MINSAL</h3>
+                <p class="text-sm text-gray-500">Reglamento sobre Manejo de Residuos de Establecimientos de Atención de Salud</p>
+            </div>
+            <p class="text-gray-700 text-sm mb-4">
+                Este decreto del Ministerio de Salud establece las condiciones sanitarias y de seguridad mínimas para el manejo de residuos generados en establecimientos de atención de salud, incluyendo su segregación, almacenamiento, transporte, tratamiento y disposición final.
+            </p>
+            <p class="text-gray-700 text-sm">
+                La normativa exige que los transportistas cuenten con autorización sanitaria vigente, vehículos adecuados y personal capacitado para garantizar un manejo seguro de estos residuos.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Tipos de REAS -->
+<section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-black text-dark mb-4 text-center">Tipos de Residuos REAS</h2>
+        <p class="text-gray-600 text-center mb-10 max-w-3xl mx-auto">
+            Los REAS se clasifican según su naturaleza y el nivel de riesgo que representan:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-light p-6 rounded-lg border-t-4 border-red-500">
+                <div class="text-center mb-3">
+                    <i class="fas fa-syringe text-3xl text-red-500"></i>
+                </div>
+                <h3 class="font-bold text-dark text-center mb-2">Cortopunzantes</h3>
+                <p class="text-sm text-gray-600">Agujas, bisturís, lancetas, ampollas rotas y otros objetos que pueden causar cortes o pinchazos.</p>
+            </div>
+            <div class="bg-light p-6 rounded-lg border-t-4 border-orange-500">
+                <div class="text-center mb-3">
+                    <i class="fas fa-biohazard text-3xl text-orange-500"></i>
+                </div>
+                <h3 class="font-bold text-dark text-center mb-2">Infecciosos</h3>
+                <p class="text-sm text-gray-600">Residuos contaminados con agentes patógenos: cultivos de laboratorio, sangre, tejidos, materiales de aislamiento.</p>
+            </div>
+            <div class="bg-light p-6 rounded-lg border-t-4 border-purple-500">
+                <div class="text-center mb-3">
+                    <i class="fas fa-flask text-3xl text-purple-500"></i>
+                </div>
+                <h3 class="font-bold text-dark text-center mb-2">Químicos</h3>
+                <p class="text-sm text-gray-600">Reactivos de laboratorio, solventes, desinfectantes, medicamentos vencidos y residuos farmacéuticos.</p>
+            </div>
+            <div class="bg-light p-6 rounded-lg border-t-4 border-yellow-500">
+                <div class="text-center mb-3">
+                    <i class="fas fa-radiation text-3xl text-yellow-500"></i>
+                </div>
+                <h3 class="font-bold text-dark text-center mb-2">Radiactivos</h3>
+                <p class="text-sm text-gray-600">Residuos provenientes de tratamientos de radioterapia, medicina nuclear y diagnóstico por imágenes.</p>
+            </div>
+            <div class="bg-light p-6 rounded-lg border-t-4 border-gray-500">
+                <div class="text-center mb-3">
+                    <i class="fas fa-vial text-3xl text-gray-500"></i>
+                </div>
+                <h3 class="font-bold text-dark text-center mb-2">Anatomopatológicos</h3>
+                <p class="text-sm text-gray-600">Órganos, tejidos, partes del cuerpo, fluidos corporales y otros residuos de procedimientos quirúrgicos.</p>
+            </div>
+            <div class="bg-light p-6 rounded-lg border-t-4 border-green-500">
+                <div class="text-center mb-3">
+                    <i class="fas fa-recycle text-3xl text-green-500"></i>
+                </div>
+                <h3 class="font-bold text-dark text-center mb-2">Asimilables a Domiciliarios</h3>
+                <p class="text-sm text-gray-600">Residuos que no representan riesgo especial: papeles, cartones, restos de alimentos de áreas no contaminadas.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cómo Transportes Mar del Sur maneja REAS -->
+<section class="py-16 bg-light">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-black text-dark mb-8 text-center">¿Cómo gestionamos el transporte REAS?</h2>
+        <div class="space-y-6">
+            <div class="bg-white p-6 rounded-lg shadow-sm flex items-start space-x-4">
+                <div class="bg-hazard p-3 rounded-full text-dark flex-shrink-0">
+                    <i class="fas fa-file-contract text-xl"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-dark text-lg">Autorización Sanitaria</h3>
+                    <p class="text-gray-600">Resolución Sanitaria N° 2510389969 vigente, que nos habilita para el transporte de residuos hospitalarios en cumplimiento del DS 6/2009.</p>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm flex items-start space-x-4">
+                <div class="bg-hazard p-3 rounded-full text-dark flex-shrink-0">
+                    <i class="fas fa-truck text-xl"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-dark text-lg">Vehículos Equipados</h3>
+                    <p class="text-gray-600">Flota con equipamiento de emergencia, señalización reglamentaria y condiciones adecuadas para el transporte seguro de REAS.</p>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm flex items-start space-x-4">
+                <div class="bg-hazard p-3 rounded-full text-dark flex-shrink-0">
+                    <i class="fas fa-id-card text-xl"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-dark text-lg">Personal Capacitado</h3>
+                    <p class="text-gray-600">Conductores con licencias profesionales A2, A4 y A5, capacitados en manejo de residuos hospitalarios y prevención de riesgos.</p>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm flex items-start space-x-4">
+                <div class="bg-hazard p-3 rounded-full text-dark flex-shrink-0">
+                    <i class="fas fa-clipboard-check text-xl"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-dark text-lg">Trazabilidad Completa</h3>
+                    <p class="text-gray-600">Documentación de cada retiro, transporte y entrega en destino final. Inscripción SIDREP y convenios con plantas de disposición autorizadas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-gradient-to-r from-hazard to-yellow-400">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-black text-dark mb-4">¿Necesitas transportar REAS?</h2>
+        <p class="text-lg text-gray-800 mb-8">
+            Contáctanos para una cotización personalizada. Cumplimiento normativo garantizado.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/contacto" class="inline-block bg-dark text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-800 transition shadow-xl">
+                <i class="fas fa-envelope mr-2"></i>
+                Solicitar Cotización
+            </a>
+            <a href="https://wa.me/56942857502" target="_blank" class="inline-block bg-green-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-700 transition shadow-xl">
+                <i class="fab fa-whatsapp mr-2"></i>
+                WhatsApp
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

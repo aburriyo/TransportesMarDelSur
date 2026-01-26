@@ -10,8 +10,8 @@
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://www.transportesmardelsur.cl/static/img/logo.png</image:loc>
-      <image:title>Logo Transporte Mar del Sur</image:title>
-      <image:caption>Transporte especializado RESPEL y REAS con resolución sanitaria</image:caption>
+      <image:title>Logo Transportes Mar del Sur</image:title>
+      <image:caption>Transportes Mar del Sur - Transporte especializado RESPEL y REAS con resolución sanitaria</image:caption>
     </image:image>
   </url>
 
@@ -61,6 +61,30 @@
     <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- Landing Page RESPEL -->
+  <url>
+    <loc>https://www.transportesmardelsur.cl/que-es-respel</loc>
+    <lastmod>2026-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Landing Page REAS -->
+  <url>
+    <loc>https://www.transportesmardelsur.cl/que-es-reas</loc>
+    <lastmod>2026-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Landing Page Transporte Puerto Montt -->
+  <url>
+    <loc>https://www.transportesmardelsur.cl/transporte-puerto-montt</loc>
+    <lastmod>2026-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
 </urlset>
